@@ -16,7 +16,7 @@ execute if score $timer1 timer matches 160 run scoreboard players set $timer1 ti
 # Kill arrow when landing
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
-# Remove torch and fire from end crystal
+# Remove torch from end fountain and fire from end crystal
 execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
@@ -34,3 +34,6 @@ give @a[scores={bread_count=..15}] minecraft:bread 1
 execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
 clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 give @a[scores={arrow_count=..15}] minecraft:arrow 1
+
+# Setting
+execute if score enderman setting matches 0 run tp @e[type=enderman] 0 -100 0

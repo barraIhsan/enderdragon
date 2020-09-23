@@ -3,7 +3,8 @@ tag @s add dragon_init
 # Set gamerule
 gamerule keepInventory true
 gamerule commandBlockOutput false
-gamerule sendCommandFeedback true
+gamerule sendCommandFeedback false
+gamerule logAdminCommands false
 gamerule spawnRadius 0
 
 # Add scoreboard
@@ -17,12 +18,18 @@ scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Kille
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
 
+# Add setting scoreboard
+scoreboard objectives add setting dummy
+scoreboard players add enderman setting 1
+
+
 # Info text
-tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
-tellraw @s "====================================="
-tellraw @s ["",{"text":"Change Difficulty : (If You Want)"},{"text":"\n"},{"text":"[Easy]","color":"red","clickEvent":{"action":"run_command","value":"/difficulty easy"}},{"text":"\n"},{"text":"[Normal]","color":"red","clickEvent":{"action":"run_command","value":"/difficulty normal"}},{"text":"\n"},{"text":"[Hard]","color":"red","clickEvent":{"action":"run_command","value":"/difficulty hard"}}]
-tellraw @s "====================================="
-tellraw @s ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram]","color":"dark_purple","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}}]
+tellraw @p ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
+tellraw @p "====================================="
+tellraw @p ["",{"text":"["},{"text":"Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:setting"}},{"text":"]"}]
+tellraw @p "====================================="
+tellraw @p ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram]","color":"purple","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}}]
+tellraw @p "====================================="
 
 # Add Spawnpoint and Worldspawn
 execute in the_end run spawnpoint @s 100 49 0
