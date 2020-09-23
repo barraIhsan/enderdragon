@@ -17,8 +17,8 @@ execute if score $timer1 timer matches 160 run scoreboard players set $timer1 ti
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove torch from end fountain and fire from end crystal
-execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
-execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
+#execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
+#execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
