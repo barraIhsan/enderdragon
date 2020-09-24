@@ -26,7 +26,7 @@ scoreboard players add dragonfireball setting 1
 # Info text
 tellraw @p ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
 tellraw @p "====================================="
-tellraw @p ["",{"text":"["},{"text":"Configuration (Requires OP, Apply To Everyone)","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"}]
+tellraw @p ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":" (Requires OP, Apply To Everyone)"},{"text":"]"}]
 tellraw @p "====================================="
 tellraw @p ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram]","color":"purple","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
 tellraw @p "====================================="

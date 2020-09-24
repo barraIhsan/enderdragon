@@ -1,4 +1,4 @@
-# Give player netherite kit
+# Give all player netherite kit
 gamemode survival @a
 clear @a
 replaceitem entity @a armor.head minecraft:netherite_helmet{Unbreakable:1b} 1

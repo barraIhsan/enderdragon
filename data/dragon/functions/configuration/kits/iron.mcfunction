@@ -1,4 +1,4 @@
-# Give player iron kit
+# Give all player iron kit
 gamemode survival @a
 clear @a
 replaceitem entity @a armor.head minecraft:iron_helmet{Unbreakable:1b} 1
