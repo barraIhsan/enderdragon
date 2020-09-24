@@ -37,3 +37,6 @@ give @a[scores={bread_count=..15}] minecraft:bread 1
 execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
 clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 give @a[scores={arrow_count=..15}] minecraft:arrow 1
+
+# Dragon fireball
+execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
