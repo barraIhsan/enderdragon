@@ -4,8 +4,11 @@ execute as @a[tag=!dragon_init] run function dragon:init
 # Give end crystal to who killed the Ender Dragon
 give @a[scores={DragonKiller=1..}] minecraft:end_crystal 4
 
+# Tell who killed The Ender Dragon
+execute if entity @a[scores={DragonKiller=1..}] run tellraw @a [{"selector":"@a[scores={DragonKiller=1..}]"}, " Killed The Ender Dragon"]
+
 # Reset the DragonKiller scoreboard
-scoreboard players set @a[scores={DragonKiller=1..}] DragonKiller 0
+scoreboard players set @a DragonKiller 0
 
 # Add scoreboard timer
 scoreboard players add $timer1 timer 1
@@ -17,8 +20,8 @@ execute if score $timer1 timer matches 160 run scoreboard players set $timer1 ti
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove torch from end fountain and fire from end crystal
-#execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
-#execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
+execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
+execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
@@ -34,6 +37,3 @@ give @a[scores={bread_count=..15}] minecraft:bread 1
 execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
 clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 give @a[scores={arrow_count=..15}] minecraft:arrow 1
-
-# Setting
-execute if score enderman setting matches 0 run tp @e[type=enderman] 0 -100 0

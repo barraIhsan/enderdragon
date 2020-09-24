@@ -5,6 +5,7 @@ gamerule keepInventory true
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
 gamerule logAdminCommands false
+gamerule announceAdvancements false
 gamerule spawnRadius 0
 
 # Add scoreboard
@@ -18,10 +19,6 @@ scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Kille
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
 
-# Add setting scoreboard
-scoreboard objectives add setting dummy
-scoreboard players add enderman setting 1
-
 # Info text
 tellraw @p ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
 tellraw @p "====================================="
@@ -34,12 +31,12 @@ tellraw @p "====================================="
 execute in the_end run spawnpoint @s 100 49 0
 execute in the_end run setworldspawn 100 49 0
 
+# Teleport to The End
+execute in the_end run teleport @s 100 49 0 90 0
+
 # Make an obsidian platform
 execute in the_end run fill 98 48 -2 102 48 2 minecraft:obsidian
 execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
-
-# Teleport to The End
-execute in the_end run teleport @s 100 49 0
 
 # Give effect for 5 second for regenerate health
 effect give @s minecraft:saturation 5 255 true
