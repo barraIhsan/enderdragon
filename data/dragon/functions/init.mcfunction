@@ -19,6 +19,10 @@ scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Kille
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
 
+# Add setting scoreboard
+scoreboard objectives add setting dummy
+scoreboard players add dragonfireball setting 1
+
 # Info text
 tellraw @p ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
 tellraw @p "====================================="
