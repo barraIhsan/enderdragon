@@ -17,3 +17,4 @@ replaceitem entity @a hotbar.4 minecraft:diamond_shovel{Unbreakable:1b} 1
 replaceitem entity @a hotbar.5 minecraft:dirt 16
 replaceitem entity @a hotbar.6 minecraft:bread 16
 replaceitem entity @a hotbar.7 minecraft:water_bucket 1
+tellraw @a "Diamond kit selected"
