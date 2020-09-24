@@ -1,4 +1,4 @@
-# Give player diamond kit
+# Give all player diamond kit
 gamemode survival @a
 clear @a
 replaceitem entity @a armor.head minecraft:diamond_helmet{Unbreakable:1b} 1

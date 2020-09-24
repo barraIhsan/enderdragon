@@ -1,4 +1,4 @@
-# Give player stomail kit
+# Give all player stomail kit
 gamemode survival @a
 clear @a
 replaceitem entity @a armor.head minecraft:chainmail_helmet{Unbreakable:1b} 1
