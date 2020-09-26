@@ -5,7 +5,7 @@ execute as @a[tag=!dragon_init] run function dragon:init
 give @a[scores={DragonKiller=1..}] minecraft:end_crystal 4
 
 # Tell who killed The Ender Dragon
-execute if entity @a[scores={DragonKiller=1..}] run tellraw @a [{"selector":"@a[scores={DragonKiller=1..}]"}, " Killed The Ender Dragon"]
+execute if entity @a[scores={DragonKiller=1..}] run tellraw @a ["",{"text":"The Ender Dragon was killed by "},{"selector":"@a[scores={DragonKiller=1..}]"}]
 
 # Reset the DragonKiller scoreboard
 scoreboard players set @a DragonKiller 0
@@ -23,6 +23,10 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
+# Add actionbar that show you how many End Crystal left
+execute in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
+title @a actionbar [{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"}}]
+
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
 clear @a[scores={dirt_count=17..}] minecraft:dirt 1
@@ -37,6 +41,12 @@ give @a[scores={bread_count=..15}] minecraft:bread 1
 execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
 clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 give @a[scores={arrow_count=..15}] minecraft:arrow 1
+
+# Infinite glass bottle & Remove dragon breath
+execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
+clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
+give @a[scores={glass_count=..15}] minecraft:glass_bottle 1
+clear @a dragon_breath 1
 
 # Dragon Fireball
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
