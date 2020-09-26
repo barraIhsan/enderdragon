@@ -43,10 +43,12 @@ clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 give @a[scores={arrow_count=..15}] minecraft:arrow 1
 
 # Infinite glass bottle & Remove dragon breath
-execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
-clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
-give @a[scores={glass_count=..15}] minecraft:glass_bottle 1
-clear @a dragon_breath 1
+execute if score glassbottle setting matches 1 run execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
+execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
+execute if score glassbottle setting matches 1 run give @a[scores={glass_count=..15}] minecraft:glass_bottle 1
+execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
 
-# Dragon Fireball
+# Setting
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
+
+execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
