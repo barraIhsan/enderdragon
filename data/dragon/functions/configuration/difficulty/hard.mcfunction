@@ -1,3 +1,3 @@
-# Set difficulty to Easy & Telling that difficulty has changed
+# Set Difficulty to Hard & Telling that Difficulty has changed
 difficulty hard
 tellraw @a "Difficulty is now set to hard"

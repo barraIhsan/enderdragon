@@ -1,7 +1,6 @@
 tag @s add dragon_init
 
 # Set gamerule
-gamerule keepInventory true
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false
 gamerule logAdminCommands false
@@ -13,23 +12,28 @@ scoreboard objectives add timer dummy
 scoreboard objectives add dirt_count dummy
 scoreboard objectives add bread_count dummy
 scoreboard objectives add arrow_count dummy
+scoreboard objectives add glass_count dummy
 scoreboard objectives add DragonKiller minecraft.killed:minecraft.ender_dragon
 scoreboard objectives add KillDragon minecraft.killed:minecraft.ender_dragon "Kill Dragon"
 scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Killed By Dragon"
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
 
+# Add endcrystal scoreboard
+scoreboard objectives add endcrystal dummy
+scoreboard players add endcrystal endcrystal 0
+
 # Add setting scoreboard
 scoreboard objectives add setting dummy
 scoreboard players add dragonfireball setting 1
 
 # Info text
-tellraw @p ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
-tellraw @p "====================================="
-tellraw @p ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":" (Requires OP, Apply To Everyone)"},{"text":"]"}]
-tellraw @p "====================================="
-tellraw @p ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram]","color":"purple","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
-tellraw @p "====================================="
+tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
+tellraw @s "====================================="
+tellraw @s ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
+tellraw @s "====================================="
+tellraw @s ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram] ","color":"pink","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
+tellraw @s "====================================="
 
 # Add Spawnpoint and Worldspawn
 execute in the_end run spawnpoint @s 100 49 0
@@ -57,6 +61,7 @@ replaceitem entity @s weapon.offhand minecraft:shield{Unbreakable:1b} 1
 replaceitem entity @s inventory.0 minecraft:arrow 16
 replaceitem entity @s inventory.9 minecraft:carved_pumpkin{Unbreakable:1b}
 replaceitem entity @s inventory.18 minecraft:crossbow{Unbreakable:1b}
+replaceitem entity @s inventory.26 minecraft:glass_bottle 16
 replaceitem entity @s hotbar.0 minecraft:bow{Unbreakable:1b} 1
 replaceitem entity @s hotbar.1 minecraft:iron_sword{Unbreakable:1b} 1
 replaceitem entity @s hotbar.2 minecraft:iron_pickaxe{Unbreakable:1b} 1
