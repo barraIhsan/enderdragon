@@ -24,8 +24,8 @@ execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
 # Add actionbar that show you how many End Crystal left
-execute in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
-title @a actionbar [{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"}}]
+execute if score crystalleft setting matches 1 run execute in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
+execute if score crystalleft setting matches 1 run title @a actionbar [{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"}}]
 
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
