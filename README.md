@@ -1,6 +1,6 @@
 # Ender Dragon Practice - Datapack
 
-Language : **English** | [Indonesia](https://github.com/barraIhsan/enderdragon/README-id.md "Indonesia")
+Language : **English** | [Indonesia](https://github.com/barraIhsan/enderdragon/blob/8f3a3881a2be4e7ec5713511202718b47b39dd9b/README-id.md "Indonesia")
 
 This datapack allows you to practice the Ender dragon
 
