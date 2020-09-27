@@ -19,6 +19,7 @@ Create a new world, then Save & Quit. (Make sure you turn on the cheat, because 
 ![Create New World](image/createNewWorld.jpg)
 
 ![Save & Quit](image/saveAndQuit.jpg)
+
 Go to [Release](https://github.com/barraIhsan/enderdragon/releases/), choose the version that you want to download, then go to asset, then choose `enderdragon-<version>.zip`
 
 ![Asset Download File](image/assetDownload.jpg)
@@ -41,6 +42,6 @@ After that, go to your world again, then Enjoy!
 | Dragon Fireball       | Enable, Disable                            | Enable        | You can switch off Dragon Fireball                                                            |
 | Keep Inventory        | Enable, Disable                            | Enable        | You can switch off Keep Inventory                                                             |
 | Ultra Survival        | Enable, Disable                            | Disable       | You can switch on Ultra Survival On (Natural Regeneration Off)                                |
-| Glass Bottle          | Enable, Disable                            | Enable        | You can switch off Glass Bottle(To clear all the Dragon Breath)                               |
+| Glass Bottle          | Enable, Disable                            | Enable        | You can switch off Glass Bottle (To clear all the Dragon Breath)                              |
 | End Crystal Actionbar | Enable, Disable                            | Enable        | You can switch off End Crystal Actionbar (Tell you how many End Crystal left to be destroyed) |
 | Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | You can Select a different Kit to fight The Ender Dragon                                      |
