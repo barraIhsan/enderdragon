@@ -45,7 +45,7 @@ loot give @a[scores={arrow_count=..15}] loot dragon:blocks/arrow
 # Infinite glass bottle & Remove dragon breath
 execute if score glassbottle setting matches 1 run execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
 execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
-execute if score glassbottle setting matches 1 run give @a[scores={glass_count=..15}] minecraft:glass_bottle 1
+execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=..15}] loot dragon:blocks/glass_bottle
 execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
 
 # Setting
