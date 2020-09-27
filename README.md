@@ -8,7 +8,7 @@ This datapack allows you to practice the Ender dragon
 
 -   [Info](#info)
 -   [Setup](#setup)
--   [How To Use](#how-to-use)
+-   [Setting](#Setting)
 
 ## Info
 
@@ -33,9 +33,7 @@ After that, go to your world again, then Enjoy!
 
 ![Play Screen](image/playScreen.jpg)
 
-## How To Use
-
-### Setting
+## Setting
 
 | Setting Name          | Value                                      | Default Value | Description                                                                                   |
 | --------------------- | ------------------------------------------ | ------------- | --------------------------------------------------------------------------------------------- |
