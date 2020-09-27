@@ -8,7 +8,7 @@ Dengan menggunakkan datapack ini, kamu bisa latihan melawan Ender Dragon
 
 -   [Info](#info)
 -   [Setup](#setup)
--   [Cara Menggunakkan](#cara-menggunakkan)
+-   [Setting](#setting)
 
 ## Info
 
@@ -33,9 +33,7 @@ Setelah itu, pergi ke worldmu lagi, dan Enjoy!
 
 ![Play Screen](image/playScreen.jpg)
 
-## Cara Menggunakkan
-
-### Setting
+## Setting
 
 | Nama Setting          | Nilai                                      | Nilai Default      | Deskripsi                                                                                           |
 | --------------------- | ------------------------------------------ | ------------------ | --------------------------------------------------------------------------------------------------- |
