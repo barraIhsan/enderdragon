@@ -34,13 +34,13 @@ After that, go to your world again, then Enjoy!
 
 ### Setting
 
-| Setting Name          | Value                                                | Default Value | Description                                                       |
-| --------------------- | ---------------------------------------------------- | ------------- | ----------------------------------------------------------------- |
-| Change Difficulty     | Peaceful, Easy, Normal, Hard                         | Normal        | -                                                                 |
-| Enderman              | Enable, Disable                                      | Enable        | -                                                                 |
-| Dragon Fireball       | Enable, Disable                                      | Enable        | -                                                                 |
-| Keep Inventory        | Enable, Disable                                      | Enable        | -                                                                 |
-| Ultra Survival        | Enable, Disable                                      | Disable       | Ultra Survival On => Natural Regeneration Off                     |
-| Glass Bottle          | Enable, Disable                                      | Enable        | Glass Bottle to clear all the Dragon Breath                       |
-| End Crystal Actionbar | Enable, Disable                                      | Enable        | Actionbar that tell you how many End Crystal left to be destroyed |
-| Select A Kit          | Woother, Stomail, Iron (Default), Diamond, Netherite | Enable        | Select A Kit to fight tThe Ender Dragon                           |
+| Setting Name          | Value                                      | Default Value | Description                                                                                   |
+| --------------------- | ------------------------------------------ | ------------- | --------------------------------------------------------------------------------------------- |
+| Change Difficulty     | Peaceful, Easy, Normal, Hard               | Normal        | Change Difficulty that you play on                                                            |
+| Enderman              | Enable, Disable                            | Enable        | You can switch off The Enderman                                                               |
+| Dragon Fireball       | Enable, Disable                            | Enable        | You can switch off Dragon Fireball                                                            |
+| Keep Inventory        | Enable, Disable                            | Enable        | You can switch off Keep Inventory                                                             |
+| Ultra Survival        | Enable, Disable                            | Disable       | You can switch on Ultra Survival On (Natural Regeneration Off)                                |
+| Glass Bottle          | Enable, Disable                            | Enable        | You can switch off Glass Bottle(To clear all the Dragon Breath)                               |
+| End Crystal Actionbar | Enable, Disable                            | Enable        | You can switch off End Crystal Actionbar (Tell you how many End Crystal left to be destroyed) |
+| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | You can Select a different Kit to fight The Ender Dragon                                      |
