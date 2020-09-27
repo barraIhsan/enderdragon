@@ -30,17 +30,17 @@ execute if score crystalleft setting matches 1 run title @a actionbar [{"text":"
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
 clear @a[scores={dirt_count=17..}] minecraft:dirt 1
-give @a[scores={dirt_count=..15}] minecraft:dirt 1
+loot give @a[scores={dirt_count=..15}] loot minecraft:blocks/dirt
 
 # Infinite bread
 execute as @a store result score @s bread_count run clear @s minecraft:bread 0
 clear @a[scores={bread_count=17..}] minecraft:bread 1
-give @a[scores={bread_count=..15}] minecraft:bread 1
+loot give @a[scores={bread_count=..15}] loot dragon:blocks/bread
 
 # Infinite arrow
 execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
 clear @a[scores={arrow_count=17..}] minecraft:arrow 1
-give @a[scores={arrow_count=..15}] minecraft:arrow 1
+loot give @a[scores={arrow_count=..15}] loot dragon:blocks/arrow
 
 # Infinite glass bottle & Remove dragon breath
 execute if score glassbottle setting matches 1 run execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
