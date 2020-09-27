@@ -23,6 +23,10 @@ scoreboard players add @s KilledByDragon 0
 scoreboard objectives add endcrystal dummy
 scoreboard players add endcrystal endcrystal 0
 
+# Add haveEndCrystal scoreboard
+scoreboard objectives add haveEndCrystal dummy
+scoreboard players add @a haveEndCrystal 0
+
 # Add setting scoreboard
 scoreboard objectives add setting dummy
 scoreboard players add dragonfireball setting 1
@@ -52,6 +56,9 @@ execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
 effect give @s minecraft:saturation 5 255 true
 effect give @s minecraft:regeneration 5 255 true
 
+# Check if player has End Crystal
+execute as @a store result score @s haveEndCrystal run clear @s minecraft:end_crystal 0
+
 # Give player iron kit
 gamemode survival @s
 clear @s
@@ -72,3 +79,7 @@ replaceitem entity @s hotbar.4 minecraft:iron_shovel{Unbreakable:1b} 1
 replaceitem entity @s hotbar.5 minecraft:dirt 16
 replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
+
+# Give them End Crystal back
+execute as @a run execute if score @s haveEndCrystal matches 4 run loot give @s loot dragon:blocks/end_crystal
+scoreboard players set @a haveEndCrystal 0
