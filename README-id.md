@@ -44,4 +44,5 @@ Setelah itu, pergi ke worldmu lagi, dan Enjoy!
 | Ultra Survival        | Enable (Aktifkan), Disable (Nonaktifkan)   | Disable (Nonaktif) | Natural Regenerationnya nonaktif                             |
 | Glass Bottle          | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Untuk membersihkan Dragon Breath                             |
 | End Crystal Actionbar | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Memberi tau tau kamu berapa end crystal lagi untuk diancurin |
+| Unable to drop item   | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
 | Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron               | Memilih kit yang berbeda untuk melawan Ender Dragon          |

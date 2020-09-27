@@ -51,3 +51,8 @@ execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
 # Setting
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
 execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
+
+# Unable them to drop item
+execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
+execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
+execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
