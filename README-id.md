@@ -1,6 +1,6 @@
 # Latihan Ender Dragon - Datapack
 
-Bahasa : [English](https://github.com/barraIhsan/enderdragon/blob/master/README.md "English") | **Indonesia**
+Bahasa : [English](README.md "English") | **Indonesia**
 
 Dengan menggunakkan datapack ini, kamu bisa latihan melawan Ender Dragon
 
