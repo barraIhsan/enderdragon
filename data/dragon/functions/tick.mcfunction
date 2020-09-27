@@ -50,5 +50,4 @@ execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
 
 # Setting
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
-
 execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
