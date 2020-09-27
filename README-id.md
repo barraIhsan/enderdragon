@@ -35,13 +35,13 @@ Setelah itu, pergi ke worldmu lagi, dan Enjoy!
 
 ## Setting
 
-| Nama Setting          | Nilai                                      | Nilai Default      | Deskripsi                                                                                           |
-| --------------------- | ------------------------------------------ | ------------------ | --------------------------------------------------------------------------------------------------- |
-| Ganti Difficulty      | Peaceful, Easy, Normal, Hard               | Normal             | Kamu bisa ganti difficulty yang kamu mainkan                                                        |
-| Enderman              | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Kamu bisa nonaktifkan Enderman                                                                      |
-| Dragon Fireball       | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Kamu bisa nonaktifkan Fireballnya Ender Dragon                                                      |
-| Keep Inventory        | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Kamu bisa menonaktifkan keep inventory                                                              |
-| Ultra Survival        | Enable (Aktifkan), Disable (Nonaktifkan)   | Disable (Nonaktif) | Kamu bisa mengaktifkan mode Ultra Survival (Natural Regenerationnya nonaktif)                       |
-| Glass Bottle          | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Kamu bisa mematikkan glass bottle (Untuk membersihkan Dragon Breath)                                |
-| End Crystal Actionbar | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Kamu bisa mematikan End Crystal Actionbar (Ngasih tau kamu berapa end crystal lagi untuk diancurin) |
-| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron               | Kamu bisa memilih kit yang berbeda untuk melawan Ender Dragon                                       |
+| Nama Setting          | Nilai                                      | Nilai Default      | Deskripsi                                                    |
+| --------------------- | ------------------------------------------ | ------------------ | ------------------------------------------------------------ |
+| Ganti Difficulty      | Peaceful, Easy, Normal, Hard               | Normal             | Ganti Difficulty yang kamu mainkan                           |
+| Enderman              | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
+| Dragon Fireball       | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
+| Keep Inventory        | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
+| Ultra Survival        | Enable (Aktifkan), Disable (Nonaktifkan)   | Disable (Nonaktif) | Natural Regenerationnya nonaktif                             |
+| Glass Bottle          | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Untuk membersihkan Dragon Breath                             |
+| End Crystal Actionbar | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Memberi tau tau kamu berapa end crystal lagi untuk diancurin |
+| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron               | Memilih kit yang berbeda untuk melawan Ender Dragon          |
