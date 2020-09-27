@@ -16,7 +16,7 @@ Please make a **NEW WORLD** only for this datapack, because your spawnpoint will
 
 ## Setup
 
-Create a new world, then Save & Quit. (Make sure you turn on the cheat, because if not, you cant open setting)
+Create a new world, then Save & Quit. (Make sure you turn on the cheat, because if not,t open setting)
 
 ![Create New World](image/createNewWorld.jpg)
 
@@ -35,13 +35,13 @@ After that, go to your world again, then Enjoy!
 
 ## Setting
 
-| Setting Name          | Value                                      | Default Value | Description                                                                                   |
-| --------------------- | ------------------------------------------ | ------------- | --------------------------------------------------------------------------------------------- |
-| Change Difficulty     | Peaceful, Easy, Normal, Hard               | Normal        | You can change the difficulty that you play on                                                |
-| Enderman              | Enable, Disable                            | Enable        | You can switch off The Enderman                                                               |
-| Dragon Fireball       | Enable, Disable                            | Enable        | You can switch off Dragon Fireball                                                            |
-| Keep Inventory        | Enable, Disable                            | Enable        | You can switch off Keep Inventory                                                             |
-| Ultra Survival        | Enable, Disable                            | Disable       | You can switch on Ultra Survival On (Natural Regeneration Off)                                |
-| Glass Bottle          | Enable, Disable                            | Enable        | You can switch off Glass Bottle (To clear all the Dragon Breath)                              |
-| End Crystal Actionbar | Enable, Disable                            | Enable        | You can switch off End Crystal Actionbar (Tell you how many End Crystal left to be destroyed) |
-| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | You can Select a different Kit to fight The Ender Dragon                                      |
+| Setting Name          | Value                                      | Default Value | Description                                        |
+| --------------------- | ------------------------------------------ | ------------- | -------------------------------------------------- |
+| Change Difficulty     | Peaceful, Easy, Normal, Hard               | Normal        | Change the Difficulty that you play on             |
+| Enderman              | Enable, Disable                            | Enable        | -                                                  |
+| Dragon Fireball       | Enable, Disable                            | Enable        | -                                                  |
+| Keep Inventory        | Enable, Disable                            | Enable        | -                                                  |
+| Ultra Survival        | Enable, Disable                            | Disable       | Natural Regeneration Off                           |
+| Glass Bottle          | Enable, Disable                            | Enable        | To clear all the Dragon Breath                     |
+| End Crystal Actionbar | Enable, Disable                            | Enable        | Tell you how many End Crystal left to be destroyed |
+| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | Select a different Kit to fight The Ender Dragon   |
