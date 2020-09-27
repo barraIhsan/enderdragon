@@ -63,7 +63,7 @@ replaceitem entity @s weapon.offhand minecraft:shield{Unbreakable:1b} 1
 replaceitem entity @s inventory.0 minecraft:arrow 16
 replaceitem entity @s inventory.9 minecraft:carved_pumpkin{Unbreakable:1b}
 replaceitem entity @s inventory.18 minecraft:crossbow{Unbreakable:1b}
-replaceitem entity @s inventory.26 minecraft:glass_bottle 16
+replaceitem entity @s hotbar.8 minecraft:glass_bottle 16
 replaceitem entity @s hotbar.0 minecraft:bow{Unbreakable:1b} 1
 replaceitem entity @s hotbar.1 minecraft:iron_sword{Unbreakable:1b} 1
 replaceitem entity @s hotbar.2 minecraft:iron_pickaxe{Unbreakable:1b} 1

@@ -11,7 +11,7 @@ replaceitem entity @a inventory.8 minecraft:netherite_hoe
 replaceitem entity @a inventory.8 minecraft:air
 replaceitem entity @a inventory.9 minecraft:carved_pumpkin{Unbreakable:1b}
 replaceitem entity @a inventory.18 minecraft:crossbow{Unbreakable:1b}
-replaceitem entity @s inventory.26 minecraft:glass_bottle 16
+replaceitem entity @s hotbar.8 minecraft:glass_bottle 16
 replaceitem entity @a hotbar.0 minecraft:bow{Unbreakable:1b} 1
 replaceitem entity @a hotbar.1 minecraft:netherite_sword{Unbreakable:1b} 1
 replaceitem entity @a hotbar.2 minecraft:netherite_pickaxe{Unbreakable:1b} 1
