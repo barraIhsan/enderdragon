@@ -81,5 +81,5 @@ replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
 
 # Give them End Crystal back
-execute as @a run execute if score @s haveEndCrystal matches 4 run loot give @s loot dragon:blocks/end_crystal
+execute as @a run execute if score @s haveEndCrystal matches 4 run loot give @s loot dragon:blocks/end_crystal`
 scoreboard players set @a haveEndCrystal 0
