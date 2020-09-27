@@ -44,4 +44,5 @@ After that, go to your world again, then Enjoy!
 | Ultra Survival        | Enable, Disable                            | Disable       | Natural Regeneration Off                           |
 | Glass Bottle          | Enable, Disable                            | Enable        | To clear all the Dragon Breath                     |
 | End Crystal Actionbar | Enable, Disable                            | Enable        | Tell you how many End Crystal left to be destroyed |
+| Unable to drop item   | Enable, Disable                            | Enable        | -                                                  |
 | Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | Select a different Kit to fight The Ender Dragon   |
