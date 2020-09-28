@@ -16,7 +16,7 @@ Please make a **NEW WORLD** only for this datapack, because your spawnpoint will
 
 ## Setup
 
-Create a new world, then Save & Quit. (Make sure you turn on the cheat, because if not,t open setting)
+Create a new world, then Save & Quit. (Make sure you turn on the cheat, because if not, you cannot open setting)
 
 ![Create New World](image/createNewWorld.jpg)
 
