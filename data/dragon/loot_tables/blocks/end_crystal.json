@@ -8,11 +8,6 @@
 					"type": "minecraft:item",
 					"name": "minecraft:end_crystal"
 				}
-			],
-			"conditions": [
-				{
-					"condition": "minecraft:survives_explosion"
-				}
 			]
 		}
 	]

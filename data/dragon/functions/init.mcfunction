@@ -23,16 +23,16 @@ scoreboard players add @s KilledByDragon 0
 scoreboard objectives add endcrystal dummy
 scoreboard players add endcrystal endcrystal 0
 
-# Add haveEndCrystal scoreboard
-scoreboard objectives add haveEndCrystal dummy
-scoreboard players add @a haveEndCrystal 0
-
-# Add setting scoreboard
+# Add setting scoreboard & Reset them
 scoreboard objectives add setting dummy
 scoreboard players add dragonfireball setting 1
 scoreboard players add glassbottle setting 1
 scoreboard players add crystalleft setting 1
 scoreboard players add unabletodrop setting 1
+scoreboard players set dragonfireball setting 1
+scoreboard players set glassbottle setting 1
+scoreboard players set crystalleft setting 1
+scoreboard players set unabletodrop setting 1
 
 # Info text
 tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
@@ -57,12 +57,9 @@ execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
 effect give @s minecraft:saturation 5 255 true
 effect give @s minecraft:regeneration 5 255 true
 
-# Check if player has End Crystal
-execute as @a store result score @s haveEndCrystal run clear @s minecraft:end_crystal 0
-
 # Give player iron kit
 gamemode survival @s
-clear @s
+clear @s #dragon:not_pearl_and_crystal
 replaceitem entity @s armor.head minecraft:iron_helmet{Unbreakable:1b} 1
 replaceitem entity @s armor.chest minecraft:iron_chestplate{Unbreakable:1b} 1
 replaceitem entity @s armor.legs minecraft:iron_leggings{Unbreakable:1b} 1
@@ -80,7 +77,3 @@ replaceitem entity @s hotbar.4 minecraft:iron_shovel{Unbreakable:1b} 1
 replaceitem entity @s hotbar.5 minecraft:dirt 16
 replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
-
-# Give them End Crystal back
-execute as @a run execute if score @s haveEndCrystal matches 4 run loot give @s loot dragon:blocks/end_crystal
-scoreboard players set @a haveEndCrystal 0
