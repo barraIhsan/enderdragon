@@ -8,11 +8,6 @@
 					"type": "minecraft:item",
 					"name": "minecraft:bread"
 				}
-			],
-			"conditions": [
-				{
-					"condition": "minecraft:survives_explosion"
-				}
 			]
 		}
 	]

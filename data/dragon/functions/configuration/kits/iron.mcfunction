@@ -1,9 +1,6 @@
-# Check if player has End Crystal
-execute as @a store result score @s haveEndCrystal run clear @s minecraft:end_crystal 0
-
 # Give all player iron kit
 gamemode survival @a
-clear @a
+clear @a #dragon:not_pearl_and_crystal
 replaceitem entity @a armor.head minecraft:iron_helmet{Unbreakable:1b} 1
 replaceitem entity @a armor.chest minecraft:iron_chestplate{Unbreakable:1b} 1
 replaceitem entity @a armor.legs minecraft:iron_leggings{Unbreakable:1b} 1
@@ -22,7 +19,3 @@ replaceitem entity @a hotbar.5 minecraft:dirt 16
 replaceitem entity @a hotbar.6 minecraft:bread 16
 replaceitem entity @a hotbar.7 minecraft:water_bucket 1
 tellraw @a "Iron kit selected"
-
-# Give them End Crystal back
-execute as @a run execute if score @s haveEndCrystal matches 4 run loot give @s loot dragon:blocks/end_crystal
-scoreboard players set @a haveEndCrystal 0
