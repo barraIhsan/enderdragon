@@ -59,7 +59,7 @@ effect give @s minecraft:regeneration 5 255 true
 
 # Give player iron kit
 gamemode survival @s
-clear @s #dragon:not_pearl_and_crystal
+clear @s #dragon:clear_kit
 replaceitem entity @s armor.head minecraft:iron_helmet{Unbreakable:1b} 1
 replaceitem entity @s armor.chest minecraft:iron_chestplate{Unbreakable:1b} 1
 replaceitem entity @s armor.legs minecraft:iron_leggings{Unbreakable:1b} 1
@@ -77,3 +77,7 @@ replaceitem entity @s hotbar.4 minecraft:iron_shovel{Unbreakable:1b} 1
 replaceitem entity @s hotbar.5 minecraft:dirt 16
 replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
+
+# Add Yellow Shulker Box to store player inventory
+forceload add 1000 1000
+setblock 1000 0 1000 minecraft:yellow_shulker_box
