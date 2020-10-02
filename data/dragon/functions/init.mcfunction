@@ -38,6 +38,7 @@ scoreboard players set unabletodrop setting 1
 tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
 tellraw @s "====================================="
 tellraw @s ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
+tellraw @s ["",{"text":"["},{"text":"Update, and Reset Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:update"}},{"text":"]"},{"text":" (Requires OP)"}]
 tellraw @s "====================================="
 tellraw @s ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram] ","color":"pink","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
 tellraw @s "====================================="
@@ -77,7 +78,3 @@ replaceitem entity @s hotbar.4 minecraft:iron_shovel{Unbreakable:1b} 1
 replaceitem entity @s hotbar.5 minecraft:dirt 16
 replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
-
-# Add Yellow Shulker Box to store player inventory
-forceload add 1000 1000
-setblock 1000 0 1000 minecraft:yellow_shulker_box
