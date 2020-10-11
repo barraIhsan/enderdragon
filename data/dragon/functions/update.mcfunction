@@ -14,8 +14,14 @@ scoreboard objectives add glass_count dummy
 scoreboard objectives add DragonKiller minecraft.killed:minecraft.ender_dragon
 scoreboard objectives add KillDragon minecraft.killed:minecraft.ender_dragon "Kill Dragon"
 scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Killed By Dragon"
+scoreboard objectives add BreadUsed minecraft.used:minecraft:bread "Bread Used"
+scoreboard objectives add DirtUsed minecraft.used:minecraft:dirt "Dirt Used"
+scoreboard objectives add GlassBottleUsed minecraft.used:minecraft:glass_bottle "Glass Bottle Used"
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
+scoreboard players add @s BreadUsed 0
+scoreboard players add @s DirtUsed 0
+scoreboard players add @s GlassBottleUsed 0
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
@@ -33,4 +39,4 @@ scoreboard players set crystalleft setting 1
 scoreboard players set unabletodrop setting 1
 
 # Info text
-tellraw @s "Datapack Updated!"
+tellraw @s "Datapack updated!"

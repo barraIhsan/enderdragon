@@ -16,8 +16,14 @@ scoreboard objectives add glass_count dummy
 scoreboard objectives add DragonKiller minecraft.killed:minecraft.ender_dragon
 scoreboard objectives add KillDragon minecraft.killed:minecraft.ender_dragon "Kill Dragon"
 scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Killed By Dragon"
+scoreboard objectives add BreadUsed minecraft.used:minecraft:bread "Bread Used"
+scoreboard objectives add DirtUsed minecraft.used:minecraft:dirt "Dirt Used"
+scoreboard objectives add GlassBottleUsed minecraft.used:minecraft:glass_bottle "Glass Bottle Used"
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
+scoreboard players add @s BreadUsed 0
+scoreboard players add @s DirtUsed 0
+scoreboard players add @s GlassBottleUsed 0
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
@@ -38,7 +44,7 @@ scoreboard players set unabletodrop setting 1
 tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
 tellraw @s "====================================="
 tellraw @s ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
-tellraw @s ["",{"text":"["},{"text":"Update, and Reset Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:update"}},{"text":"]"},{"text":" (Requires OP)"}]
+tellraw @s ["",{"text":"["},{"text":"Update, and Reset Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:update"},"hoverEvent":{"action":"show_text","content":"After you update the datapack to latest version, click this to update the scoreboard"}},{"text":"]"},{"text":" (Requires OP)"}]
 tellraw @s "====================================="
 tellraw @s ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram] ","color":"pink","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
 tellraw @s "====================================="
