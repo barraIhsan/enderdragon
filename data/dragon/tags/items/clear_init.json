@@ -1,5 +1,5 @@
 {
-	"description": "All items, including air",
+	"description": "All items, including air, excluding end crystal, and ender pearl",
 	"values": [
 		"minecraft:acacia_boat",
 		"minecraft:acacia_button",
