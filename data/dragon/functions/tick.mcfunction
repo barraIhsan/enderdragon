@@ -17,7 +17,8 @@ execute if score $timer1 timer matches 81 run scoreboard objectives setdisplay s
 execute if score $timer1 timer matches 160 run scoreboard objectives setdisplay sidebar DirtUsed
 execute if score $timer1 timer matches 180 run scoreboard objectives setdisplay sidebar BreadUsed
 execute if score $timer1 timer matches 200 run scoreboard objectives setdisplay sidebar GlassBottleUsed
-execute if score $timer1 timer matches 220 run scoreboard players set $timer1 timer 0
+execute if score $timer1 timer matches 220 run scoreboard objectives setdisplay sidebar GlassBottleUsed
+execute if score $timer1 timer matches 240 run scoreboard players set $timer1 timer 0
 
 # Kill arrow when landing
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
@@ -60,3 +61,7 @@ execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
 execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
 execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
+
+# Welcome Message
+execute as @a run execute if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":" !","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" times"}]
+execute as @a run execute if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
