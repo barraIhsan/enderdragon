@@ -19,11 +19,15 @@ scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Kille
 scoreboard objectives add BreadUsed minecraft.used:minecraft.bread "Bread Used"
 scoreboard objectives add DirtUsed minecraft.used:minecraft.dirt "Dirt Used"
 scoreboard objectives add GlassBottleUsed minecraft.used:minecraft.glass_bottle "Glass Bottle Used"
+scoreboard objectives add ArrowUsed minecraft.used:minecraft.arrow "Arrow Used"
+scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard players add @s KillDragon 0
 scoreboard players add @s KilledByDragon 0
 scoreboard players add @s BreadUsed 0
 scoreboard players add @s DirtUsed 0
 scoreboard players add @s GlassBottleUsed 0
+scoreboard players add @s ArrowUsed 0
+scoreboard players add @s WelcomeMessage 0
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
