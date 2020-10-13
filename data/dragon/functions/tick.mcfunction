@@ -14,7 +14,10 @@ scoreboard players set @a DragonKiller 0
 scoreboard players add $timer1 timer 1
 execute if score $timer1 timer matches 1 run scoreboard objectives setdisplay sidebar KillDragon
 execute if score $timer1 timer matches 81 run scoreboard objectives setdisplay sidebar KilledByDragon
-execute if score $timer1 timer matches 160 run scoreboard players set $timer1 timer 0
+execute if score $timer1 timer matches 160 run scoreboard objectives setdisplay sidebar DirtUsed
+execute if score $timer1 timer matches 180 run scoreboard objectives setdisplay sidebar BreadUsed
+execute if score $timer1 timer matches 200 run scoreboard objectives setdisplay sidebar GlassBottleUsed
+execute if score $timer1 timer matches 220 run scoreboard players set $timer1 timer 0
 
 # Kill arrow when landing
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
