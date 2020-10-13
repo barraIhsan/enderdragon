@@ -63,5 +63,5 @@ execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a run execute if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":" !","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" times"}]
+execute as @a run execute if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
 execute as @a run execute if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
