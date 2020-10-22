@@ -55,6 +55,12 @@ execute if score glassbottle setting matches 1 run clear @a potion{Potion:"minec
 # Setting
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
 execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
+execute if score difficulty setting matches 0 run difficulty peaceful
+execute if score difficulty setting matches 1 run difficulty easy
+execute if score difficulty setting matches 2 run difficulty normal
+execute if score difficulty setting matches 3 run difficulty hard
+execute if score keepinventory setting matches 0 run gamerule keepInventory false
+execute if score keepinventory setting matches 1 run gamerule keepInventory true
 
 # Unable them to drop item
 execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
