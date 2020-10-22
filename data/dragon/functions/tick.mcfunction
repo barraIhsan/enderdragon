@@ -27,7 +27,7 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 
 # Add actionbar that show you how many End Crystal left
-execute if score crystalleft setting matches 1 run execute in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
+execute if score crystalleft setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
 execute if score crystalleft setting matches 1 run title @a actionbar [{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"}}]
 
 # Infinite dirt
@@ -46,7 +46,7 @@ clear @a[scores={arrow_count=17..}] minecraft:arrow 1
 loot give @a[scores={arrow_count=..15}] loot dragon:blocks/arrow
 
 # Infinite glass bottle & Remove dragon breath and water bottle
-execute if score glassbottle setting matches 1 run execute as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
+execute if score glassbottle setting matches 1 as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
 execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
 execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=..15}] loot dragon:blocks/glass_bottle
 execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
@@ -57,13 +57,13 @@ execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireba
 execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
 
 # Unable them to drop item
-execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
-execute if score unabletodrop setting matches 1 run execute as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
+execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
+execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a run execute if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
-execute as @a run execute if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
+execute as @a if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
 
 # Arrow Used Scoreboard
 execute as @a run scoreboard players operation @s ArrowUsed += @s BowUsed
