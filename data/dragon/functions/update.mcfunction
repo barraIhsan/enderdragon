@@ -39,14 +39,14 @@ scoreboard players add endcrystal endcrystal 0
 
 # Add setting scoreboard & Reset them
 scoreboard objectives add setting dummy
-scoreboard players add dragonfireball setting 1
-scoreboard players add glassbottle setting 1
-scoreboard players add crystalleft setting 1
-scoreboard players add unabletodrop setting 1
 scoreboard players set dragonfireball setting 1
 scoreboard players set glassbottle setting 1
 scoreboard players set crystalleft setting 1
 scoreboard players set unabletodrop setting 1
+scoreboard players set difficulty setting 2
+scoreboard players set enderman setting 1
+scoreboard players set keepinventory setting 1
+scoreboard players set kits setting 4
 
 # Info text
-tellraw @s "Datapack updated!"
+tellraw @s "Datapack updated! (Scoreboard)"
