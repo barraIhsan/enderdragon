@@ -7,8 +7,9 @@ replaceitem entity @a armor.legs minecraft:chainmail_leggings{Unbreakable:1b} 1
 replaceitem entity @a armor.feet minecraft:chainmail_boots{Unbreakable:1b} 1
 replaceitem entity @a weapon.offhand minecraft:shield{Unbreakable:1b} 1
 replaceitem entity @a inventory.0 minecraft:arrow 16
-replaceitem entity @a inventory.9 minecraft:carved_pumpkin{Unbreakable:1b}
-replaceitem entity @a inventory.18 minecraft:crossbow{Unbreakable:1b}
+replaceitem entity @a inventory.9 minecraft:carved_pumpkin{Unbreakable:1b} 1
+replaceitem entity @a inventory.18 minecraft:crossbow{Unbreakable:1b} 1
+replaceitem entity @a hotbar.0 bow{Unbreakable:1b} 1
 replaceitem entity @a hotbar.1 minecraft:stone_sword{Unbreakable:1b} 1
 replaceitem entity @a hotbar.2 minecraft:stone_pickaxe{Unbreakable:1b} 1
 replaceitem entity @a hotbar.3 minecraft:stone_axe{Unbreakable:1b} 1
