@@ -69,3 +69,7 @@ execute as @a run execute if score @s WelcomeMessage matches 1 run scoreboard pl
 # Arrow Used Scoreboard
 execute as @a run scoreboard players operation @s ArrowUsed += @s BowUsed
 execute as @a run scoreboard players operation @s ArrowUsed += @s CrossbowUsed
+
+# Reset the BowUsed and CrossbowUsed
+scoreboard players reset @a BowUsed
+scoreboard players reset @a CrossbowUsed
