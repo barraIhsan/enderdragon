@@ -23,9 +23,8 @@ execute if score $timer1 timer matches 240 run scoreboard players set $timer1 ti
 # Kill arrow when landing
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
-# Remove torch from end fountain and fire from end crystal
+# Remove fire from end crystal
 execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
-execute in the_end run fill -1 0 -1 1 255 1 air replace minecraft:wall_torch
 
 # Add actionbar that show you how many End Crystal left
 execute if score crystalleft setting matches 1 run execute in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
