@@ -35,15 +35,15 @@ execute if score crystalleft setting matches 1 if score endcrystal endcrystal ma
 
 # Add .... animation
 scoreboard players add $timer2 timer 1
-execute if score $timer2 timer matches 21 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.","color":"light_purple"}]
+execute if score $timer2 timer matches 11 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.","color":"light_purple"}]
 
-execute if score $timer2 timer matches 41 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..","color":"light_purple"}]
+execute if score $timer2 timer matches 21 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..","color":"light_purple"}]
 
-execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...","color":"light_purple"}]
+execute if score $timer2 timer matches 31 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...","color":"light_purple"}]
 
-execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon....","color":"light_purple"}]
+execute if score $timer2 timer matches 41 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon....","color":"light_purple"}]
 
-execute if score $timer2 timer matches 62 run scoreboard players set $timer2 timer 0
+execute if score $timer2 timer matches 42 run scoreboard players set $timer2 timer 0
 
 # Infinite dirt
 execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
