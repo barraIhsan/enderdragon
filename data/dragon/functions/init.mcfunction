@@ -23,6 +23,7 @@ scoreboard objectives add ArrowUsed dummy "Arrow Used"
 scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
+scoreboard objectives add missedEC dummy
 
 # Add players to scoreboard
 scoreboard players add @s KillDragon 0
