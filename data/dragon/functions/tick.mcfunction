@@ -78,3 +78,6 @@ execute as @a run scoreboard players operation @s ArrowUsed += @s CrossbowUsed
 # Reset the BowUsed and CrossbowUsed
 scoreboard players reset @a BowUsed
 scoreboard players reset @a CrossbowUsed
+
+# Execute at end portal the misplaced code
+execute in minecraft:the_end positioned 0 128 0 at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run function dragon:endcrystal/end_crystals
