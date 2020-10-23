@@ -27,20 +27,20 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 
 # Add actionbar that show you how many End Crystal left
-execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"All The End Crystal has been destroyed!"}]
+execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"All The End Crystal has been destroyed!","color":"light_purple"}]
 execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"}}]
 
-execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon!"}]
+execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon!","color":"light_purple"}]
 
 # Add .... animation
 scoreboard players add $timer2 timer 1
-execute if score $timer2 timer matches 21 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon."}]
+execute if score $timer2 timer matches 21 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.","color":"light_purple"}]
 
-execute if score $timer2 timer matches 41 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.."}]
+execute if score $timer2 timer matches 41 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..","color":"light_purple"}]
 
-execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..."}]
+execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...","color":"light_purple"}]
 
-execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...."}]
+execute if score $timer2 timer matches 61 if score crystalleft setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon....","color":"light_purple"}]
 
 execute if score $timer2 timer matches 62 run scoreboard players set $timer2 timer 0
 
