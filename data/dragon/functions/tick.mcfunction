@@ -4,6 +4,11 @@ execute as @a[tag=!dragon_init] run function dragon:init
 # Give end crystal to who killed the Ender Dragon
 give @a[scores={DragonKiller=1..}] minecraft:end_crystal 4
 
+# Clear all end crystal from player after ender dragon has been summoned
+execute as @a if entity @s[scores={DragonKiller=1..}] run tag @s add killedEnderDragon
+execute if entity @a[tag=killedEnderDragon] unless entity @e[type=ender_dragon] run tag @a remove killedEnderDragon
+execute unless entity @a[tag=killedEnderDragon] run clear @a end_crystal
+
 # Tell who killed The Ender Dragon
 execute if entity @a[scores={DragonKiller=1..}] run tellraw @a ["",{"text":"The Ender Dragon was killed by "},{"selector":"@a[scores={DragonKiller=1..}]"}]
 
@@ -108,6 +113,3 @@ execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e
 execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=-2.5,z=0.5,limit=1,sort=nearest] Invulnerable set value 1b
 execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0.5,z=-2.5,limit=1,sort=nearest] Invulnerable set value 1b
 execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=3.5,z=0.5,limit=1,sort=nearest] Invulnerable set value 1b
-
-# Clear all end crystal from player after ender dragon has been summoned
-execute if entity @e[type=ender_dragon] run clear @a end_crystal
