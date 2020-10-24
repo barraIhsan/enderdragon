@@ -28,10 +28,10 @@ execute in the_end run fill 3 0 -3 -3 255 3 air replace minecraft:fire
 
 # Add actionbar that show you how many End Crystal left
 execute if score crystalleft setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
-execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"All The End Crystal has been destroyed!","color":"light_purple"}]
-execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"End Crystals left: ","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"},"color":"light_purple","bold": true}]
+execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"All Crystal has been destroyed! Now, Fight the Ender Dragon!","color":"light_purple"}]
+execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Destroy All Crystal! (","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"},"color":"light_purple","bold": true},{"text": " / 10)","color": "light_purple"}]
 
-execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon!","color":"light_purple"}]
+execute if score crystalleft setting matches 1 if score endcrystal endcrystal matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon! ","color":"light_purple"}]
 
 # Add .... animation
 scoreboard players add $timer2 timer 1
@@ -83,7 +83,10 @@ execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] 
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @p ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"["},{"text":"Update, and Reset Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:update"},"hoverEvent":{"action":"show_text","content":"After you update the datapack to latest version, click this to update the scoreboard"}},{"text":"]"},{"text":" (Requires OP)"}]
+
 execute as @a if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
 
 # Arrow Used Scoreboard
