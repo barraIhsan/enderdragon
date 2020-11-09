@@ -24,10 +24,10 @@ execute if score $timer1 timer matches 240 run scoreboard players set $timer1 ti
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove fire from end crystal
-execute in minecraft:the_end positioned 0 256 0 at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-1 -3 -3 ~-1 3 air replace minecraft:fire
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~-4 3 air replace minecraft:fire
 
 # Remove end portal from end fountain
-execute in minecraft:the_end positioned 0 256 0 at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-2 -3 -3 ~-2 3 air replace minecraft:end_portal
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
 
 # Add actionbar that show you how many End Crystal left
 execute if score crystalleft setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
