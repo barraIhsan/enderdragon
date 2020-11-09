@@ -24,15 +24,15 @@ scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
 
 # Add players to scoreboard
-scoreboard players add @s KillDragon 0
-scoreboard players add @s KilledByDragon 0
-scoreboard players add @s BreadUsed 0
-scoreboard players add @s DirtUsed 0
-scoreboard players add @s GlassBottleUsed 0
-scoreboard players add @s ArrowUsed 0
-scoreboard players add @s BowUsed 0
-scoreboard players add @s CrossbowUsed 0
-scoreboard players add @s WelcomeMessage 0
+scoreboard players add @a KillDragon 0
+scoreboard players add @a KilledByDragon 0
+scoreboard players add @a BreadUsed 0
+scoreboard players add @a DirtUsed 0
+scoreboard players add @a GlassBottleUsed 0
+scoreboard players add @a ArrowUsed 0
+scoreboard players add @a BowUsed 0
+scoreboard players add @a CrossbowUsed 0
+scoreboard players add @a WelcomeMessage 0
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
