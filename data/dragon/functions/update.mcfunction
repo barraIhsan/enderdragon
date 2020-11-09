@@ -48,6 +48,7 @@ scoreboard players set difficulty setting 2
 scoreboard players set enderman setting 1
 scoreboard players set keepinventory setting 1
 scoreboard players set kits setting 4
+scoreboard players set ultrasurvival setting 0
 
 # Info text
 tellraw @s "Datapack updated! (Scoreboard)"

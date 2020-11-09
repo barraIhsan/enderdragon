@@ -1,5 +1,5 @@
 # Give all player netherite kit
-scoreboard players set difficulty setting 4
+scoreboard players set kits setting 4
 gamemode survival @a
 clear @a #dragon:clear
 replaceitem entity @a armor.head minecraft:netherite_helmet{Unbreakable:1b} 1

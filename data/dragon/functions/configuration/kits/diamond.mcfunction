@@ -1,5 +1,5 @@
 # Give all player diamond kit
-scoreboard players set difficulty setting 3
+scoreboard players set kits setting 3
 gamemode survival @a
 clear @a #dragon:clear
 replaceitem entity @a armor.head minecraft:diamond_helmet{Unbreakable:1b} 1
