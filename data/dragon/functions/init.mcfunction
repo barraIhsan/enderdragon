@@ -95,3 +95,6 @@ replaceitem entity @s hotbar.5 minecraft:dirt 16
 replaceitem entity @s hotbar.6 minecraft:bread 16
 replaceitem entity @s hotbar.7 minecraft:water_bucket 1
 replaceitem entity @s hotbar.8 minecraft:glass_bottle 16
+
+# Tell everyone that the setting have been reseted
+tellraw @a ["",{"text": "A new player has join! Setting have been reseted"}]
