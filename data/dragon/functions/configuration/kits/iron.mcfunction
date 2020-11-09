@@ -20,3 +20,5 @@ replaceitem entity @a hotbar.6 minecraft:bread 16
 replaceitem entity @a hotbar.7 minecraft:water_bucket 1
 replaceitem entity @a hotbar.8 minecraft:glass_bottle 16
 tellraw @a "Iron kit selected"
+function dragon:clear_text
+function dragon:configuration
