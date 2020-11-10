@@ -54,6 +54,7 @@ scoreboard players set keepinventory setting 1
 scoreboard players set kits setting 4
 scoreboard players set #kits_tmp setting 4
 scoreboard players set ultrasurvival setting 0
+scoreboard players set health setting 1
 
 # Give effect to update the health scoreboard
 effect give @s minecraft:instant_damage 1 0 true
