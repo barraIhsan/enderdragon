@@ -1,5 +1,6 @@
 # Give all player iron kit
 scoreboard players set kits setting 2
+scoreboard players set #kits_tmp setting 2
 gamemode survival @a
 clear @a #dragon:clear
 replaceitem entity @a armor.head minecraft:iron_helmet{Unbreakable:1b} 1

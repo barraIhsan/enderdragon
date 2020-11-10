@@ -1,5 +1,6 @@
 # Give all player stomail kit
 scoreboard players set kits setting 1
+scoreboard players set #kits_tmp setting 1
 gamemode survival @a
 clear @a #dragon:clear
 replaceitem entity @a armor.head minecraft:chainmail_helmet{Unbreakable:1b} 1
