@@ -24,10 +24,10 @@ execute if score $timer1 timer matches 240 run scoreboard players set $timer1 ti
 kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove fire from end crystal
-execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~-4 3 air replace minecraft:fire
+execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
 
 # Remove end portal from end fountain
-execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
+execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
 
 # Add actionbar that show you how many End Crystal left
 execute if score crystalleft setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
@@ -79,6 +79,14 @@ execute if score difficulty setting matches 2 run difficulty normal
 execute if score difficulty setting matches 3 run difficulty hard
 execute if score keepinventory setting matches 0 run gamerule keepInventory false
 execute if score keepinventory setting matches 1 run gamerule keepInventory true
+execute if score ultrasurvival setting matches 0 run gamerule naturalRegeneration true
+execute if score ultrasurvival setting matches 1 run gamerule naturalRegeneration false
+
+execute unless score #kits_tmp setting = kits setting run function dragon:configuration/kits/check
+scoreboard players operation #kits_tmp setting = kits setting
+
+execute unless score #enderman_tmp setting = enderman setting run function dragon:configuration/enderman/check
+scoreboard players operation #enderman_tmp setting = enderman setting
 
 # Unable them to drop item
 execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
@@ -101,7 +109,7 @@ scoreboard players reset @a BowUsed
 scoreboard players reset @a CrossbowUsed
 
 # Execute at end portal the misplaced code
-execute in minecraft:the_end positioned 0 256 0 at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run function dragon:endcrystal/end_crystals
+execute in minecraft:the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run function dragon:endcrystal/end_crystals
 
 # Set all end crystal in end fountain to invulnerable
 execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0,z=3,limit=1,sort=nearest] Invulnerable set value 1b
