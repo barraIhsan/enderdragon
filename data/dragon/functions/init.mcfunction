@@ -56,6 +56,7 @@ scoreboard players set keepinventory setting 1
 scoreboard players set kits setting 4
 scoreboard players set #kits_tmp setting 4
 scoreboard players set ultrasurvival setting 0
+scoreboard players set health setting 1
 
 # Info text
 tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
