@@ -46,8 +46,10 @@ scoreboard players set crystalleft setting 1
 scoreboard players set unabletodrop setting 1
 scoreboard players set difficulty setting 2
 scoreboard players set enderman setting 1
+scoreboard players set #enderman_tmp setting 1
 scoreboard players set keepinventory setting 1
 scoreboard players set kits setting 4
+scoreboard players set #kits_tmp setting 4
 scoreboard players set ultrasurvival setting 0
 
 # Info text
