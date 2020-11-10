@@ -1,11 +1,13 @@
 # Clear all message
 function dragon:clear_text
 
-tellraw @p ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @p ["",{"text":"                Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Settings                  "}]
+tellraw @s ["",{"text":"                Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Settings                  "}]
 
-tellraw @p ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+tellraw @s ["",{"text": "\n\n"}]
 
 # Change Difficulty Message
 execute if score difficulty setting matches 0 run tellraw @s ["",{"text":"[ Peaceful ]","color":"green","clickEvent":{"action":"run_command","value":"/function dragon:configuration/difficulty/easy"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the difficulty to Easy"}}},{"text":" Difficulty"}]
@@ -52,4 +54,6 @@ execute if score kits setting matches 2 run tellraw @s ["",{"text":"[ Iron ]","c
 execute if score kits setting matches 3 run tellraw @s ["",{"text":"[ Diamond ]","color":"#319BDD","clickEvent":{"action":"run_command","value":"/function dragon:configuration/kits/netherite"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Netherite"}}},{"text":" Kits"}]
 execute if score kits setting matches 4 run tellraw @s ["",{"text":"[ Netherite ]","color":"#383335","clickEvent":{"action":"run_command","value":"/function dragon:configuration/kits/woother"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Woother"}}},{"text":" Kits"}]
 
-tellraw @p ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+tellraw @s ["",{"text": "\n\n"}]
+
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
