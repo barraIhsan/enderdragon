@@ -1,5 +1,6 @@
 # Give all player woother kit
 scoreboard players set kits setting 0
+scoreboard players set #kits_tmp setting 0
 gamemode survival @a
 clear @a #dragon:clear
 replaceitem entity @a armor.head minecraft:leather_helmet{Unbreakable:1b} 1
