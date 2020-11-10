@@ -38,10 +38,10 @@ After that, go to your world again, then Enjoy!
 | Setting Name          | Value                                      | Default Value | Description                                        |
 | --------------------- | ------------------------------------------ | ------------- | -------------------------------------------------- |
 | Change Difficulty     | Peaceful, Easy, Normal, Hard               | Normal        | Change the Difficulty that you play on             |
-| Enderman              | Enable, Disable                            | Enable        | -                                                  |
+| Enderman              | Enable, Disable                            | Enable        | Enderman that naturally spawn                      |
 | Dragon Fireball       | Enable, Disable                            | Enable        | -                                                  |
 | Keep Inventory        | Enable, Disable                            | Enable        | -                                                  |
-| Ultra Survival        | Enable, Disable                            | Disable       | Natural Regeneration Off                           |
+| Ultra Survival        | Enable, Disable                            | Disable       | Natural Regeneration                               |
 | Glass Bottle          | Enable, Disable                            | Enable        | To clear all the Dragon Breath                     |
 | End Crystal Actionbar | Enable, Disable                            | Enable        | Tell you how many End Crystal left to be destroyed |
 | Unable to drop item   | Enable, Disable                            | Enable        | -                                                  |

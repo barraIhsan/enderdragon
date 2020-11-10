@@ -38,7 +38,7 @@ Setelah itu, pergi ke worldmu lagi, dan Enjoy!
 | Nama Setting          | Nilai                                      | Nilai Default      | Deskripsi                                                    |
 | --------------------- | ------------------------------------------ | ------------------ | ------------------------------------------------------------ |
 | Ganti Difficulty      | Peaceful, Easy, Normal, Hard               | Normal             | Ganti Difficulty yang kamu mainkan                           |
-| Enderman              | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
+| Enderman              | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | Enderman yg spawn natural                                    |
 | Dragon Fireball       | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
 | Keep Inventory        | Enable (Aktifkan), Disable (Nonaktifkan)   | Enable (Aktif)     | -                                                            |
 | Ultra Survival        | Enable (Aktifkan), Disable (Nonaktifkan)   | Disable (Nonaktif) | Natural Regenerationnya nonaktif                             |
