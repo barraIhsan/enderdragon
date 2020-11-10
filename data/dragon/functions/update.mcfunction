@@ -55,5 +55,9 @@ scoreboard players set kits setting 4
 scoreboard players set #kits_tmp setting 4
 scoreboard players set ultrasurvival setting 0
 
+# Give effect to update the health scoreboard
+effect give @s minecraft:instant_damage 1 0 true
+effect give @s minecraft:regeneration 4 2 true
+
 # Info text
 tellraw @s "Datapack updated! (Scoreboard)"

@@ -77,9 +77,9 @@ execute in the_end run teleport @s 100 49 0 90 0
 execute in the_end run fill 98 48 -2 102 48 2 minecraft:obsidian
 execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
 
-# Give effect for 5 second for regenerate health
-effect give @s minecraft:saturation 5 255 true
-effect give @s minecraft:regeneration 5 255 true
+# Give effect for 5 second for regenerate health & update the health scoreboard
+effect give @s minecraft:instant_damage 1 0 true
+effect give @s minecraft:regeneration 4 2 true
 
 # Give player iron kit
 gamemode survival @s
