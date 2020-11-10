@@ -81,7 +81,7 @@ execute if score keepinventory setting matches 0 run gamerule keepInventory fals
 execute if score keepinventory setting matches 1 run gamerule keepInventory true
 execute if score ultrasurvival setting matches 0 run gamerule naturalRegeneration true
 execute if score ultrasurvival setting matches 1 run gamerule naturalRegeneration false
-execute if score health setting matches 0 run scoreboard objectives setdisplay belowName
+execute if score health setting matches 0 run scoreboard objectives setdisplay belowName wear_pumpkin
 execute if score health setting matches 0 run scoreboard objectives setdisplay list
 execute if score health setting matches 1 run scoreboard objectives setdisplay belowName health
 execute if score health setting matches 1 run scoreboard objectives setdisplay list health
