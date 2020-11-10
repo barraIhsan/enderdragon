@@ -81,26 +81,12 @@ execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
 effect give @s minecraft:instant_damage 1 0 true
 effect give @s minecraft:regeneration 4 2 true
 
-# Give player iron kit
-gamemode survival @s
-clear @s #dragon:clear
-replaceitem entity @s armor.head minecraft:iron_helmet{Unbreakable:1b} 1
-replaceitem entity @s armor.chest minecraft:iron_chestplate{Unbreakable:1b} 1
-replaceitem entity @s armor.legs minecraft:iron_leggings{Unbreakable:1b} 1
-replaceitem entity @s armor.feet minecraft:iron_boots{Unbreakable:1b} 1
-replaceitem entity @s weapon.offhand minecraft:shield{Unbreakable:1b} 1
-replaceitem entity @s inventory.0 minecraft:arrow 16
-replaceitem entity @s inventory.9 minecraft:carved_pumpkin{Unbreakable:1b}
-replaceitem entity @s inventory.18 minecraft:crossbow{Unbreakable:1b}
-replaceitem entity @s hotbar.0 minecraft:bow{Unbreakable:1b} 1
-replaceitem entity @s hotbar.1 minecraft:iron_sword{Unbreakable:1b} 1
-replaceitem entity @s hotbar.2 minecraft:iron_pickaxe{Unbreakable:1b} 1
-replaceitem entity @s hotbar.3 minecraft:iron_axe{Unbreakable:1b} 1
-replaceitem entity @s hotbar.4 minecraft:iron_shovel{Unbreakable:1b} 1
-replaceitem entity @s hotbar.5 minecraft:dirt 16
-replaceitem entity @s hotbar.6 minecraft:bread 16
-replaceitem entity @s hotbar.7 minecraft:water_bucket 1
-replaceitem entity @s hotbar.8 minecraft:glass_bottle 16
+# Give player current kit
+execute if score kits setting matches 0 run function dragon:init_kits/woother
+execute if score kits setting matches 1 run function dragon:init_kits/stomail
+execute if score kits setting matches 2 run function dragon:init_kits/iron
+execute if score kits setting matches 3 run function dragon:init_kits/diamond
+execute if score kits setting matches 4 run function dragon:init_kits/netherite
 
 # Tell everyone that the setting have been reseted
 tellraw @a ["",{"text": "A new player has join! Setting have been reseted"}]
