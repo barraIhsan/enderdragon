@@ -22,6 +22,9 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
+scoreboard objectives add health health "❤"
+scoreboard objectives setdisplay belowName health
+scoreboard objectives setdisplay list health
 
 # Add players to scoreboard
 scoreboard players add @a KillDragon 0
