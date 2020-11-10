@@ -1,5 +1,5 @@
 {
-	"description": "All items, excluding end crystal, and ender pearl",
+	"description": "All items, excluding ender pearl",
 	"values": [
 		"minecraft:acacia_boat",
 		"minecraft:acacia_button",
@@ -307,6 +307,7 @@
 		"minecraft:enchanted_book",
 		"minecraft:enchanted_golden_apple",
 		"minecraft:enchanting_table",
+		"minecraft:end_crystal",
 		"minecraft:end_portal_frame",
 		"minecraft:end_rod",
 		"minecraft:end_stone",
@@ -373,7 +374,6 @@
 		"minecraft:grass",
 		"minecraft:grass_block",
 		"minecraft:grass_path",
-		"minecraft:dirt_path",
 		"minecraft:gravel",
 		"minecraft:gray_banner",
 		"minecraft:gray_bed",

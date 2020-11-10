@@ -11,6 +11,7 @@ scoreboard objectives add dirt_count dummy
 scoreboard objectives add bread_count dummy
 scoreboard objectives add arrow_count dummy
 scoreboard objectives add glass_count dummy
+scoreboard objectives add crystal_count dummy
 scoreboard objectives add DragonKiller minecraft.killed:minecraft.ender_dragon
 scoreboard objectives add KillDragon minecraft.killed:minecraft.ender_dragon "Kill Dragon"
 scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Killed By Dragon"
