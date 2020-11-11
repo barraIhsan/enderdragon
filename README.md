@@ -37,7 +37,7 @@ After that, go to your world again, then Enjoy!
 
 | Setting Name          | Value                                      | Default Value | Description                                        |
 | --------------------- | ------------------------------------------ | ------------- | -------------------------------------------------- |
-| Change Difficulty     | Peaceful, Easy, Normal, Hard               | Normal        | Change the Difficulty that you play on             |
+| Difficulty            | Peaceful, Easy, Normal, Hard               | Normal        | Change the Difficulty that you play on             |
 | Enderman              | Enable, Disable                            | Enable        | Enderman that naturally spawn                      |
 | Dragon Fireball       | Enable, Disable                            | Enable        | -                                                  |
 | Keep Inventory        | Enable, Disable                            | Enable        | -                                                  |
@@ -45,4 +45,5 @@ After that, go to your world again, then Enjoy!
 | Glass Bottle          | Enable, Disable                            | Enable        | To clear all the Dragon Breath                     |
 | End Crystal Actionbar | Enable, Disable                            | Enable        | Tell you how many End Crystal left to be destroyed |
 | Unable to drop item   | Enable, Disable                            | Enable        | -                                                  |
+| Health                | Enable, Disable                            | Enable        | Tell you people health                             |
 | Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite | Iron          | Select a different Kit to fight The Ender Dragon   |
