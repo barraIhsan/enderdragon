@@ -1,10 +1,3 @@
-# Set gamerule
-gamerule commandBlockOutput false
-gamerule sendCommandFeedback false
-gamerule logAdminCommands false
-gamerule announceAdvancements false
-gamerule spawnRadius 0
-
 # Add scoreboard
 scoreboard objectives add timer dummy
 scoreboard objectives add dirt_count dummy
@@ -25,8 +18,6 @@ scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
 scoreboard objectives add health health "❤"
-scoreboard objectives setdisplay belowName health
-scoreboard objectives setdisplay list health
 
 # Add players to scoreboard
 scoreboard players add @a KillDragon 0
@@ -41,7 +32,7 @@ scoreboard players add @a WelcomeMessage 0
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
-scoreboard players add endcrystal endcrystal 0
+execute unless score endcrystal endcrystal = endcrystal endcrystal run scoreboard players set endcrystal endcrystal 0
 
 # Add setting scoreboard
 scoreboard objectives add setting dummy
@@ -62,7 +53,3 @@ execute unless score health setting = health setting run scoreboard players set 
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
 execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
 scoreboard players reset crystalleft setting
-
-# Give effect to update the health scoreboard
-execute unless score health setting = health setting run effect give @a minecraft:instant_damage 1 0 true
-execute unless score health setting = health setting run effect give @a minecraft:regeneration 4 2 true
