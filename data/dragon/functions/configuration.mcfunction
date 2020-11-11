@@ -16,8 +16,9 @@ execute if score difficulty setting matches 2 run tellraw @s ["",{"text":"[ Norm
 execute if score difficulty setting matches 3 run tellraw @s ["",{"text":"[ Hard ]","color":"red","clickEvent":{"action":"run_command","value":"/function dragon:configuration/difficulty/peaceful"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the difficulty to Peaceful"}}},{"text":" Difficulty"}]
 
 # Enable / Disable Enderman Message
-execute if score enderman setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:configuration/enderman/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable enderman"}}},{"text":" Enderman"}]
-execute if score enderman setting matches 1 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:configuration/enderman/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable enderman"}}},{"text":" Enderman"}]
+execute if score difficulty setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "#820000","hoverEvent": {"action": "show_text","contents": {"text": "The difficulty is Peaceful.\nSo automatically enderman is off"}}},{"text":" Enderman"}]
+execute if score enderman setting matches 0 unless score difficulty setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:configuration/enderman/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable enderman"}}},{"text":" Enderman"}]
+execute if score enderman setting matches 1 unless score difficulty setting matches 0 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:configuration/enderman/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable enderman"}}},{"text":" Enderman"}]
 
 # Enable / Disable Dragon Fireball Message
 execute if score dragonfireball setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:configuration/dragonfireball/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable dragon fireball"}}},{"text":" Dragon Fireball"}]
