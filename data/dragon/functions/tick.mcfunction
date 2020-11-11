@@ -26,8 +26,14 @@ kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 # Remove fire from end crystal
 execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
 
+# Turn off fire damage if there is no dragon
+execute unless entity @e[type=minecraft:ender_dragon] run effect give @a fire_resistance 1 0 true
+
 # Remove end portal from end fountain
 execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
+
+# Clear iron bars
+clear @a iron_bars 1
 
 # Add actionbar that show you how many End Crystal left
 execute if score crystalleft setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
