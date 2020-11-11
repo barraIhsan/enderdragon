@@ -37,3 +37,4 @@ scoreboard players set @s crystal_count 0
 # Replace the helmet with pumpkin if player wear pumpkin before
 execute as @a if score @s wear_pumpkin matches 1 run replaceitem entity @a armor.head minecraft:carved_pumpkin{Unbreakable:1b} 1
 execute as @a if score @s wear_pumpkin matches 1 run replaceitem entity @a inventory.9 minecraft:leather_helmet{Unbreakable:1b} 1
+playsound ui.button.click master @a ~ ~ ~ 0.3
