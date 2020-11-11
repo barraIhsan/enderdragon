@@ -5,3 +5,4 @@ gamerule doMobSpawning false
 tp @e[type=minecraft:enderman] 0 -100 0
 tellraw @a "Enderman is now disabled"
 function dragon:configuration
+playsound ui.button.click master @a ~ ~ ~ 0.3

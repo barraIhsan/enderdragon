@@ -2,3 +2,4 @@
 scoreboard players set unabletodrop setting 0
 tellraw @a "Unable to drop is now disabled"
 function dragon:configuration
+playsound ui.button.click master @a ~ ~ ~ 0.3
