@@ -47,7 +47,7 @@ scoreboard players add endcrystal endcrystal 0
 scoreboard objectives add setting dummy
 execute unless score dragonfireball setting = dragonfireball setting run scoreboard players set dragonfireball setting 1
 execute unless score glassbottle setting = glassbottle setting run scoreboard players set glassbottle setting 1
-execute unless score crystalleft setting = crystalleft setting run scoreboard players set crystalleft setting 1
+execute unless score actionbar setting = actionbar setting run scoreboard players set actionbar setting 1
 execute unless score unabletodrop setting = unabletodrop setting run scoreboard players set unabletodrop setting 1
 execute unless score difficulty setting = difficulty setting run scoreboard players set difficulty setting 2
 execute unless score enderman setting = enderman setting run scoreboard players set enderman setting 1
@@ -57,6 +57,11 @@ execute unless score kits setting = kits setting run scoreboard players set kits
 execute unless score #kits_tmp setting = #kits_tmp setting run scoreboard players set #kits_tmp setting 2
 execute unless score ultrasurvival setting = ultrasurvival setting run scoreboard players set ultrasurvival setting 0
 execute unless score health setting = health setting run scoreboard players set health setting 1
+
+# Changes crystalleft to actionbar
+execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
+execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
+scoreboard players reset crystalleft setting
 
 # Give effect to update the health scoreboard
 execute unless score health setting = health setting run effect give @a minecraft:instant_damage 1 0 true
