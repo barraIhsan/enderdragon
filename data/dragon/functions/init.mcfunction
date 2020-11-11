@@ -49,7 +49,7 @@ scoreboard players add endcrystal endcrystal 0
 scoreboard objectives add setting dummy
 execute unless score dragonfireball setting = dragonfireball setting run scoreboard players set dragonfireball setting 1
 execute unless score glassbottle setting = glassbottle setting run scoreboard players set glassbottle setting 1
-execute unless score crystalleft setting = crystalleft setting run scoreboard players set crystalleft setting 1
+execute unless score actionbar setting = actionbar setting run scoreboard players set actionbar setting 1
 execute unless score unabletodrop setting = unabletodrop setting run scoreboard players set unabletodrop setting 1
 execute unless score difficulty setting = difficulty setting run scoreboard players set difficulty setting 2
 execute unless score enderman setting = enderman setting run scoreboard players set enderman setting 1
