@@ -18,6 +18,7 @@ scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
 scoreboard objectives add health health {"text": "❤","color": "red"}
+scoreboard objectives add food dummy
 
 # Modify the display name of health
 scoreboard objectives modify health displayname {"text": "❤","color": "red"}
@@ -45,6 +46,13 @@ execute unless score health setting = health setting run scoreboard players set 
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
 execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
 execute if score crystalleft setting matches 0..1 run scoreboard players reset crystalleft setting
+
+# Update the health scoreboard
+execute as @a at @s store result score @s food run data get entity @s foodLevel
+execute if score ultrasurvival setting matches 1 run scoreboard players set #ultrasurvival_tmp setting 1
+scoreboard players set ultrasurvival setting 0
+execute as @a at @s if score @s food matches 20 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
+execute if score #ultrasurvival_tmp setting matches 1 run scoreboard players set ultrasurvival setting 1
 
 # Run it per 10 minute
 schedule function dragon:update 600s
