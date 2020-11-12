@@ -19,17 +19,6 @@ scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
 scoreboard objectives add health health "❤"
 
-# Add players to scoreboard
-scoreboard players add @a KillDragon 0
-scoreboard players add @a KilledByDragon 0
-scoreboard players add @a BreadUsed 0
-scoreboard players add @a DirtUsed 0
-scoreboard players add @a GlassBottleUsed 0
-scoreboard players add @a ArrowUsed 0
-scoreboard players add @a BowUsed 0
-scoreboard players add @a CrossbowUsed 0
-scoreboard players add @a WelcomeMessage 0
-
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
 execute unless score endcrystal endcrystal = endcrystal endcrystal run scoreboard players set endcrystal endcrystal 0
@@ -52,4 +41,7 @@ execute unless score health setting = health setting run scoreboard players set 
 # Changes crystalleft to actionbar
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
 execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
-scoreboard players reset crystalleft setting
+execute if score crystalleft setting matches 0..1 run scoreboard players reset crystalleft setting
+
+# Run it per 10 second
+schedule function dragon:update 10s
