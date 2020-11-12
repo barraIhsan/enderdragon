@@ -27,19 +27,7 @@ scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
 scoreboard objectives add health health {"text": "❤","color": "red"}
-scoreboard objectives setdisplay belowName health
-scoreboard objectives setdisplay list health
-
-# Add players to scoreboard
-scoreboard players add @s KillDragon 0
-scoreboard players add @s KilledByDragon 0
-scoreboard players add @s BreadUsed 0
-scoreboard players add @s DirtUsed 0
-scoreboard players add @s GlassBottleUsed 0
-scoreboard players add @s ArrowUsed 0
-scoreboard players add @s BowUsed 0
-scoreboard players add @s CrossbowUsed 0
-scoreboard players add @s WelcomeMessage 0
+scoreboard objectives add food dummy
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
