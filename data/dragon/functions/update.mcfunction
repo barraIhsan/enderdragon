@@ -17,7 +17,10 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add missedEC dummy
-scoreboard objectives add health health "❤"
+scoreboard objectives add health health {"text": "❤","color": "red"}
+
+# Modify the display name of health
+scoreboard objectives modify health displayname {"text": "❤","color": "red"}
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
