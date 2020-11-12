@@ -43,5 +43,5 @@ execute if score crystalleft setting matches 0 run scoreboard players set action
 execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
 execute if score crystalleft setting matches 0..1 run scoreboard players reset crystalleft setting
 
-# Run it per 10 second
-schedule function dragon:update 10s
+# Run it per 10 minute
+schedule function dragon:update 600s
