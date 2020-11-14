@@ -53,12 +53,23 @@ execute unless score health setting = health setting run effect give @a minecraf
 execute unless score health setting = health setting run effect give @a minecraft:regeneration 4 2 true
 
 # Info text
-tellraw @s ["",{"text":"To Start Ender Dragon Practice, You Should Make A "},{"text":"NEW ","bold":true,"color":"blue"},{"text":"World "},{"text":"ONLY ","bold":true,"color":"blue"},{"text":"For Practice, Because You'll Be Stuck In The End, Unless You Know Execute Command"}]
-tellraw @s "====================================="
-tellraw @s ["",{"text":"["},{"text":"setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:setting"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
-tellraw @s "====================================="
-tellraw @s ["",{"text":"Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n"},{"text":"[Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"}},{"text":"[Instagram] ","color":"pink","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"}},{"text":"[GitHub] ","color":"gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"}}]
-tellraw @s "====================================="
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+tellraw @p ["",{"text":"                       Ender Dragon Practice             "}]
+
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+tellraw @s ["",{"text": "\n"},{"text":"                  Make sure you have read "},{"text": "README","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/blob/master/README.md"},"hoverEvent": {"action": "show_text","contents": "Click to Read README!"}},{"text": "\n"},{"text": "                   AND download the "},{"text": "Recourcepack!","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/releases/download/v1.2.1/Ender-Dragon-Practice-Recourcepack-v1.2.1.zip"},"hoverEvent": {"action": "show_text","contents": "Click to download my recourcepack!"}},{"text": "\n"}]
+
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+tellraw @s ["",{"text":"                           [ Open Setting ]","color":"green","clickEvent":{"action":"run_command","value":"/function dragon:setting"},"hoverEvent": {"action": "show_text","contents": "Requires OP"}}]
+
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [Twitter] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [Instagram] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [GitHub] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n"}]
+
+tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
 # Add Spawnpoint and Worldspawn
 execute in the_end run spawnpoint @s 100 49 0
@@ -77,6 +88,3 @@ execute if score kits setting matches 1 run function dragon:init_kits/stomail
 execute if score kits setting matches 2 run function dragon:init_kits/iron
 execute if score kits setting matches 3 run function dragon:init_kits/diamond
 execute if score kits setting matches 4 run function dragon:init_kits/netherite
-
-# Tell everyone that the setting have been reseted
-tellraw @a ["",{"text": "A new player has join!"}]
