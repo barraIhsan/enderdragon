@@ -92,10 +92,10 @@ execute if score health setting matches 0 run scoreboard objectives setdisplay l
 execute if score health setting matches 1 run scoreboard objectives setdisplay belowName health
 execute if score health setting matches 1 run scoreboard objectives setdisplay list health
 
-execute unless score #kits_tmp setting = kits setting run function dragon:configuration/kits/check
+execute unless score #kits_tmp setting = kits setting run function dragon:setting/kits/check
 scoreboard players operation #kits_tmp setting = kits setting
 
-execute unless score #enderman_tmp setting = enderman setting run function dragon:configuration/enderman/check
+execute unless score #enderman_tmp setting = enderman setting run function dragon:setting/enderman/check
 scoreboard players operation #enderman_tmp setting = enderman setting
 
 # Unable them to drop item
@@ -111,7 +111,7 @@ execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":" 
 execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
 execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text": "[ ","color": "green"},{"score": {"objective": "KillDragon","name": "@s"},"color": "green"},{"text": " ] ","color": "green"},{"text": "Kill Dragon"},{"text": "\n"},{"text": "[ ","color": "red"},{"score": {"objective": "KilledByDragon","name": "@s"},"color": "red"},{"text": " ] ","color": "red"},{"text": "Killed By Dragon"},{"text": "\n"},{"text": "[ ","color": "#79553A"},{"score": {"objective": "DirtUsed","name": "@s"},"color": "#79553A"},{"text": " ] ","color": "#79553A"},{"text": "Dirt Used"},{"text": "\n"},{"text": "[ ","color": "#BC8927"},{"score": {"objective": "BreadUsed","name": "@s"},"color": "#BC8927"},{"text": " ] ","color": "#BC8927"},{"text": "Bread Used"},{"text": "\n"},{"text": "[ ","color": "#444444"},{"score": {"objective": "ArrowUsed","name": "@s"},"color": "#444444"},{"text": " ] ","color": "#444444"},{"text": "Arrow Used"},{"text": "\n"},{"text": "[ ","color": "#C6C6C6"},{"score": {"objective": "GlassBottleUsed","name": "@s"},"color": "#C6C6C6"},{"text": " ] ","color": "#C6C6C6"},{"text": "Glass Bottle Used"}]
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"[ Configuration ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":" (Requires OP)"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"[ setting ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:setting"}},{"text":" (Requires OP)"}]
 
 execute as @a if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
 
