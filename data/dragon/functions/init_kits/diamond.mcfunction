@@ -1,6 +1,9 @@
 # Check if player has end crystal
 execute as @a store result score @s crystal_count run clear @s minecraft:end_crystal 0
 
+# Check if player wear pumpkin
+execute as @a store success score @s wear_pumpkin run data get entity @s Inventory[{Slot:103b,id:"minecraft:carved_pumpkin"}]
+
 # Give player diamond kit
 gamemode survival @s
 clear @s #dragon:clear
@@ -29,3 +32,7 @@ execute as @a if score @s crystal_count matches 3 run give @s minecraft:end_crys
 execute as @a if score @s crystal_count matches 4 run give @s minecraft:end_crystal 4
 execute as @a if score @s crystal_count matches 5.. run give @s minecraft:end_crystal 4
 scoreboard players set @a crystal_count 0
+
+# Replace the helmet with pumpkin if player wear pumpkin before
+execute as @a if score @s wear_pumpkin matches 1 run replaceitem entity @a armor.head minecraft:carved_pumpkin{Unbreakable:1b} 1
+execute as @a if score @s wear_pumpkin matches 1 run replaceitem entity @a inventory.9 minecraft:diamond_helmet{Unbreakable:1b} 1
