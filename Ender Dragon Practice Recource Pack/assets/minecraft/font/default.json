@@ -2,37 +2,37 @@
     "providers": [
         {
             "type": "bitmap",
-            "file": "minecraft:item/oak_plank.png",
-            "ascent": 16,
-            "height": 16,
+            "file": "minecraft:block/oak_planks.png",
+            "ascent": 10,
+            "height": 10,
             "chars": ["\uE100"]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/stone.png",
-            "ascent": 16,
-            "height": 16,
+            "file": "minecraft:block/stone.png",
+            "ascent": 10,
+            "height": 10,
             "chars": ["\uE101"]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/iron_ingots.png",
-            "ascent": 16,
-            "height": 16,
+            "file": "minecraft:item/iron_ingot.png",
+            "ascent": 10,
+            "height": 10,
             "chars": ["\uE102"]
         },
         {
             "type": "bitmap",
             "file": "minecraft:item/diamond.png",
-            "ascent": 16,
-            "height": 16,
+            "ascent": 10,
+            "height": 10,
             "chars": ["\uE103"]
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/netherite_ingots.png",
-            "ascent": 16,
-            "height": 16,
+            "file": "minecraft:item/netherite_ingot.png",
+            "ascent": 10,
+            "height": 10,
             "chars": ["\uE104"]
         }
     ]
