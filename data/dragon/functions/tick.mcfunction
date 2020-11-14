@@ -16,8 +16,8 @@ execute if score $timer1 timer matches 1 run scoreboard objectives setdisplay si
 execute if score $timer1 timer matches 81 run scoreboard objectives setdisplay sidebar KilledByDragon
 execute if score $timer1 timer matches 160 run scoreboard objectives setdisplay sidebar DirtUsed
 execute if score $timer1 timer matches 180 run scoreboard objectives setdisplay sidebar BreadUsed
-execute if score $timer1 timer matches 200 run scoreboard objectives setdisplay sidebar GlassBottleUsed
-execute if score $timer1 timer matches 220 run scoreboard objectives setdisplay sidebar ArrowUsed
+execute if score $timer1 timer matches 200 run scoreboard objectives setdisplay sidebar ArrowUsed
+execute if score $timer1 timer matches 220 run scoreboard objectives setdisplay sidebar GlassBottleUsed
 execute if score $timer1 timer matches 240 run scoreboard players set $timer1 timer 0
 
 # Kill arrow when landing
@@ -104,9 +104,14 @@ execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] 
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"Welcome Back ","bold":true},{"selector":"@s","bold":true},{"text":"!","bold":true},{"text":"\n"},{"text":"You've killed Dragon "},{"score":{"name":"@s","objective":"KillDragon"}},{"text":" time(s)"},{"text":"\n"},{"text":"You've been killed by the Dragon "},{"score":{"name":"@s","objective":"KilledByDragon"}},{"text":" time(s)"}]
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"["},{"text":"Configuration","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":"]"},{"text":" (Requires OP, Apply To Everyone)"}]
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"["},{"text":"Update, and Reset Setting","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:update"},"hoverEvent":{"action":"show_text","content":"After you update the datapack to latest version, click this to update the scoreboard"}},{"text":"]"},{"text":" (Requires OP)"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"             Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Statistics                  "}]
+
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
+
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text": "[ ","color": "green"},{"score": {"objective": "KillDragon","name": "@s"},"color": "green"},{"text": " ] ","color": "green"},{"text": "Kill Dragon"},{"text": "\n"},{"text": "[ ","color": "red"},{"score": {"objective": "KilledByDragon","name": "@s"},"color": "red"},{"text": " ] ","color": "red"},{"text": "Killed By Dragon"},{"text": "\n"},{"text": "[ ","color": "#79553A"},{"score": {"objective": "DirtUsed","name": "@s"},"color": "#79553A"},{"text": " ] ","color": "#79553A"},{"text": "Dirt Used"},{"text": "\n"},{"text": "[ ","color": "#BC8927"},{"score": {"objective": "BreadUsed","name": "@s"},"color": "#BC8927"},{"text": " ] ","color": "#BC8927"},{"text": "Bread Used"},{"text": "\n"},{"text": "[ ","color": "#444444"},{"score": {"objective": "ArrowUsed","name": "@s"},"color": "#444444"},{"text": " ] ","color": "#444444"},{"text": "Arrow Used"},{"text": "\n"},{"text": "[ ","color": "#C6C6C6"},{"score": {"objective": "GlassBottleUsed","name": "@s"},"color": "#C6C6C6"},{"text": " ] ","color": "#C6C6C6"},{"text": "Glass Bottle Used"}]
+execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"[ Configuration ]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function dragon:configuration"}},{"text":" (Requires OP)"}]
 
 execute as @a if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
 

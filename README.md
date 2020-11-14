@@ -46,4 +46,4 @@ After that, go to your world again, then Enjoy!
 | End Crystal Actionbar | Enable, Disable                              | Enable        | Tell you how many End Crystal left to be destroyed |
 | Unable to drop item   | Enable, Disable                              | Enable        | -                                                  |
 | Health                | Enable, Disable                              | Enable        | Tell you people health                             |
-| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Select a different Kit to fight The Ender Dragon   |
+| Kits          | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Select a different Kit to fight The Ender Dragon   |

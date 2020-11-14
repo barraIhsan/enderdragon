@@ -46,4 +46,4 @@ Setelah itu, pergi ke worldmu lagi, dan Enjoy!
 | End Crystal Actionbar | Aktifkan, Nonaktifkan                        | Aktif         | Memberi tau tau kamu berapa end crystal lagi untuk diancurin |
 | Unable to drop item   | Aktifkan, Nonaktifkan                        | Aktif         | -                                                            |
 | Health                | Aktifkan, Nonaktifkan                        | Aktif         | Memberi tahu health orang                                    |
-| Select A Kit          | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Memilih kit yang berbeda untuk melawan Ender Dragon          |
+| Kits                  | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Memilih kit yang berbeda untuk melawan Ender Dragon          |
