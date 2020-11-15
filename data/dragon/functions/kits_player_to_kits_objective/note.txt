@@ -1,17 +1,20 @@
-0 = Nothing
-1 = Wooden / Leather
-2 = Gold
-3 = Stone / Chainmail
-4 = Iron
-5 = Diamond
-6 = Netherite
+0 = Nothing  => \uE000
+1 = Wooden / Leather => \uE10
+2 = Gold => \uE20
+3 = Stone / Chainmail => \uE30
+4 = Iron => \uE40
+5 = Diamond => \uE50
+6 = Netherite => \uE60
+7 = Turtle Shell => \uE001
 
-helmet
-chestplate
-leggings
-boots
+helmet => 0
+chestplate => 1
+leggings => 2
+boots => 3
 
-sword
-pickaxe
-axe
-shovel
+sword => 4
+pickaxe => 5
+axe => 6
+shovel => 7
+
+{"translate":"%1$s","with":[{"text":"This shows without the pack"},{"text":"This shows with the pack"}]}

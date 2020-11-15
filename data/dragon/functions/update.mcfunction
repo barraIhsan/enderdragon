@@ -42,6 +42,17 @@ execute unless score health setting = health setting run scoreboard players set 
 execute unless score friendlyfire setting = friendlyfire setting run scoreboard players set friendlyfire setting 1
 execute unless score killarrow setting = killarrow setting run scoreboard players set killarrow setting 1
 
+# Add kits scoreboard
+scoreboard objectives add kits dummy
+execute unless score helmet kits = helmet kits run scoreboard players set helmet kits 4
+execute unless score chestplate kits = chestplate kits run scoreboard players set chestplate kits 4
+execute unless score leggings kits = leggings kits run scoreboard players set leggings kits 4
+execute unless score boots kits = boots kits run scoreboard players set boots kits 4
+execute unless score sword kits = sword kits run scoreboard players set sword kits 4
+execute unless score pickaxe kits = pickaxe kits run scoreboard players set pickaxe kits 4
+execute unless score axe kits = axe kits run scoreboard players set axe kits 4
+execute unless score shovel kits = shovel kits run scoreboard players set shovel kits 4
+
 # Changes crystalleft to actionbar
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
 execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
