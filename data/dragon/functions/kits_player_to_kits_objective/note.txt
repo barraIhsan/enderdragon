@@ -10,6 +10,7 @@ helmet
 chestplate
 leggings
 boots
+
 sword
 pickaxe
 axe
