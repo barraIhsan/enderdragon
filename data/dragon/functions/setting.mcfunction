@@ -7,7 +7,7 @@ tellraw @s ["",{"text":"                Ender Dragon Practice "},{"text":"/","co
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @s ["",{"text": "\n\n"}]
+tellraw @s ["",{"text": "\n"}]
 
 # Change Difficulty Message
 execute if score difficulty setting matches 0 run tellraw @s ["",{"text":"[ P ]","color":"green","clickEvent":{"action":"run_command","value":"/function dragon:setting/difficulty/easy"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the difficulty to Easy"}}},{"text":" Difficulty"}]
@@ -48,6 +48,14 @@ execute if score unabletodrop setting matches 1 run tellraw @s ["",{"text": "[ �
 execute if score health setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:setting/health/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable health"}}},{"text":" Health"}]
 execute if score health setting matches 1 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:setting/health/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable health"}}},{"text":" Health"}]
 
+# Enable / Disable Kill Arrow Message
+execute if score killarrow setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:setting/killarrow/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable kill arrow when landing"}}},{"text":" Kill Arrow When Landing"}]
+execute if score killarrow setting matches 1 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:setting/killarrow/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable kill arrow when landing"}}},{"text":" Kill Arrow When Landing"}]
+
+# Enable / Disable Friendly Fire Message
+execute if score friendlyfire setting matches 0 run tellraw @s ["",{"text": "[ ❌ ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:setting/friendlyfire/enable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Enable friendly fire"}}},{"text":" Friendly Fire"}]
+execute if score friendlyfire setting matches 1 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:setting/friendlyfire/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable friendly fire"}}},{"text":" Friendly Fire"}]
+
 # Change Kits Message
 execute if score kits setting matches 0 run tellraw @s ["",{"text":"[ ","color":"#855E42","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/stomail"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Stomail"}}},{"translate":"%1$s","with":[{"text":"Woother"},{"text":"\uE100"}],"clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/stomail"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Stomail"}}},{"text":" ]","color":"#855E42","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/stomail"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Stomail"}}},{"text":" Kits"}]
 execute if score kits setting matches 1 run tellraw @s ["",{"text":"[ ","color":"#6D7876","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/iron"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Iron"}}},{"translate":"%1$s","with":[{"text":"Stomail"},{"text":"\uE101"}],"clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/iron"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Iron"}}},{"text":" ]","color":"#6D7876","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/iron"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Iron"}}},{"text":" Kits"}]
@@ -55,6 +63,6 @@ execute if score kits setting matches 2 run tellraw @s ["",{"text":"[ ","color":
 execute if score kits setting matches 3 run tellraw @s ["",{"text":"[ ","color":"#319BDD","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/netherite"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Netherite"}}},{"translate":"%1$s","with":[{"text":"Diamond"},{"text":"\uE103"}],"clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/netherite"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Netherite"}}},{"text":" ]","color":"#319BDD","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/netherite"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Netherite"}}},{"text":" Kits"}]
 execute if score kits setting matches 4 run tellraw @s ["",{"text":"[ ","color":"#383335","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/woother"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Woother"}}},{"translate":"%1$s","with":[{"text":"Nehterite"},{"text":"\uE104"}],"clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/woother"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Woother"}}},{"text":" ]","color":"#383335","clickEvent":{"action":"run_command","value":"/function dragon:setting/kits/woother"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to set the kits to Woother"}}},{"text":" Kits"}]
 
-tellraw @s ["",{"text": "\n\n"}]
+tellraw @s ["",{"text": "\n"}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
