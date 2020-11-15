@@ -1,0 +1,16 @@
+0 = Nothing
+1 = Wooden / Leather
+2 = Gold
+3 = Stone / Chainmail
+4 = Iron
+5 = Diamond
+6 = Netherite
+
+helmet
+chestplate
+leggings
+boots
+sword
+pickaxe
+axe
+shovel
