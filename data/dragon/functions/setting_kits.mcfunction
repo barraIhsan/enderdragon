@@ -3,7 +3,7 @@ function dragon:clear_text
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @s ["",{"text":"                Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Settings                  "}]
+tellraw @s ["",{"text":"              Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Kits Settings              "}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
