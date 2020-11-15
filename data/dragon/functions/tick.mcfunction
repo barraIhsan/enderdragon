@@ -93,8 +93,6 @@ execute if score health setting matches 1 run scoreboard objectives setdisplay b
 execute if score health setting matches 1 run scoreboard objectives setdisplay list health
 execute if score friendlyfire setting matches 0 run team modify all friendlyFire false
 execute if score friendlyfire setting matches 1 run team modify all friendlyFire true
-execute if score pushpeople setting matches 0 run team modify all collisionRule never
-execute if score pushpeople setting matches 1 run team modify all collisionRule always
 
 execute unless score #kits_tmp setting = kits setting run function dragon:setting/kits/check
 scoreboard players operation #kits_tmp setting = kits setting
