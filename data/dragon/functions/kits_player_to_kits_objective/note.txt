@@ -1,4 +1,4 @@
-0 = Nothing  => \uE000
+0 = None  => \uE000
 1 = Wooden / Leather => \uE10
 2 = Gold => \uE20
 3 = Stone / Chainmail => \uE30
