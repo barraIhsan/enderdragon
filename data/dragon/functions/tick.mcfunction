@@ -94,9 +94,6 @@ execute if score health setting matches 1 run scoreboard objectives setdisplay l
 execute if score friendlyfire setting matches 0 run team modify all friendlyFire false
 execute if score friendlyfire setting matches 1 run team modify all friendlyFire true
 
-execute unless score #kits_tmp setting = kits setting run function dragon:setting/kits/check
-scoreboard players operation #kits_tmp setting = kits setting
-
 execute unless score #enderman_tmp setting = enderman setting run function dragon:setting/enderman/check
 scoreboard players operation #enderman_tmp setting = enderman setting
 
