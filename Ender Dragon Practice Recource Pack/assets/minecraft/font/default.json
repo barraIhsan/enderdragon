@@ -2,7 +2,7 @@
 	"providers": [
 		{
 			"type": "bitmap",
-			"file": "minecraft:item/barrier.png",
+			"file": "minecraft:dragon/barrier.png",
 			"ascent": 8,
 			"height": 9,
 			"chars": ["\uE000"]
@@ -97,6 +97,48 @@
 			"ascent": 9,
 			"height": 12,
 			"chars": ["\uE601"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE102"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE202"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE302"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE402"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE502"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE602"]
 		}
 	]
 }
