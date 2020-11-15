@@ -41,6 +41,8 @@ execute unless score kits setting = kits setting run scoreboard players set kits
 execute unless score #kits_tmp setting = #kits_tmp setting run scoreboard players set #kits_tmp setting 2
 execute unless score ultrasurvival setting = ultrasurvival setting run scoreboard players set ultrasurvival setting 0
 execute unless score health setting = health setting run scoreboard players set health setting 1
+execute unless score friendlyfire setting = friendlyfire setting run scoreboard players set friendlyfire setting 1
+execute unless score killarrow setting = killarrow setting run scoreboard players set killarrow setting 1
 
 # Changes crystalleft to actionbar
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
