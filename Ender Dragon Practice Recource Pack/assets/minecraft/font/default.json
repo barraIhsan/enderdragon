@@ -139,6 +139,48 @@
 			"ascent": 9,
 			"height": 12,
 			"chars": ["\uE602"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE103"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE203"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE303"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE403"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE503"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE603"]
 		}
 	]
 }
