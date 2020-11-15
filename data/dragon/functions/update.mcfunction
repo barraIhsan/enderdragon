@@ -72,7 +72,7 @@ execute if score kits setting matches 1 run function dragon:kits_player_to_kits_
 execute if score kits setting matches 2 run function dragon:kits_player_to_kits_objective/iron
 execute if score kits setting matches 3 run function dragon:kits_player_to_kits_objective/diamond
 execute if score kits setting matches 4 run function dragon:kits_player_to_kits_objective/netherite
-execute if score crystalleft setting matches 0..4 run scoreboard players reset kits setting
+execute if score kits setting matches 0..4 run scoreboard players reset kits setting
 
 # Run it per 10 minute
 schedule function dragon:update 600s
