@@ -70,3 +70,13 @@ execute if score shovel kits matches 3 run replaceitem entity @s hotbar.4 stone_
 execute if score shovel kits matches 4 run replaceitem entity @s hotbar.4 iron_shovel
 execute if score shovel kits matches 5 run replaceitem entity @s hotbar.4 diamond_shovel
 execute if score shovel kits matches 6 run replaceitem entity @s hotbar.4 netherite_shovel
+
+# Generic
+replaceitem entity @s inventory.0 arrow 16
+replaceitem entity @s inventory.9 carved_pumpkin{Unbreakable:1b}
+replaceitem entity @s inventory.18 crossbow{Unbreakable:1b}
+replaceitem entity @s hotbar.0 bow{Unbreakable:1b}
+replaceitem entity @s hotbar.5 dirt 16
+replaceitem entity @s hotbar.6 bread 16
+replaceitem entity @s hotbar.7 water_bucket
+replaceitem entity @s hotbar.8 glass_bottle 16
