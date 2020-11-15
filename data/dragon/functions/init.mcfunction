@@ -49,7 +49,6 @@ execute unless score ultrasurvival setting = ultrasurvival setting run scoreboar
 execute unless score health setting = health setting run scoreboard players set health setting 1
 execute unless score friendlyfire setting = friendlyfire setting run scoreboard players set friendlyfire setting 1
 execute unless score killarrow setting = killarrow setting run scoreboard players set killarrow setting 1
-execute unless score pushpeople setting = pushpeople setting run scoreboard players set pushpeople setting 1
 
 # Give effect to update the health scoreboard
 execute unless score health setting = health setting run effect give @s minecraft:instant_damage 1 0 true
