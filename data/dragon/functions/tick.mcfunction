@@ -21,7 +21,7 @@ execute if score $timer1 timer matches 220 run scoreboard objectives setdisplay 
 execute if score $timer1 timer matches 240 run scoreboard players set $timer1 timer 0
 
 # Kill arrow when landing
-kill @e[type=minecraft:arrow,nbt={inGround:1b}]
+execute if score killarrow setting matches 1 run kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove fire from end crystal
 execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
@@ -91,6 +91,8 @@ execute if score health setting matches 0 run scoreboard objectives setdisplay b
 execute if score health setting matches 0 run scoreboard objectives setdisplay list
 execute if score health setting matches 1 run scoreboard objectives setdisplay belowName health
 execute if score health setting matches 1 run scoreboard objectives setdisplay list health
+execute if score friendlyfire setting matches 0 run team modify all friendlyFire false
+execute if score friendlyfire setting matches 1 run team modify all friendlyFire true
 
 execute unless score #kits_tmp setting = kits setting run function dragon:setting/kits/check
 scoreboard players operation #kits_tmp setting = kits setting
