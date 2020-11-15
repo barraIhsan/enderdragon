@@ -57,7 +57,7 @@ execute if score friendlyfire setting matches 0 run tellraw @s ["",{"text": "[ �
 execute if score friendlyfire setting matches 1 run tellraw @s ["",{"text": "[ ✔ ]","color": "green","clickEvent": {"action": "run_command","value": "/function dragon:setting/friendlyfire/disable"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to Disable friendly fire"}}},{"text":" Friendly Fire"}]
 
 # Go to kits page
-tellraw @s ["",{"text":"[ » ]","color":"#b5b5b5","clickEvent":{"action":"run_command","value":"/function dragon:setting_kits"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to the Basic Kits Page"}}},{"text":" Basic Kits"}]
+tellraw @s ["",{"text":"[ » ]","color":"#b5b5b5","clickEvent":{"action":"run_command","value":"/function dragon:setting_kits"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to the Kits Page"}}},{"text":" Kits"}]
 
 tellraw @s ["",{"text": "\n"}]
 
