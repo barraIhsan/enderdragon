@@ -51,5 +51,9 @@ execute if score crystalleft setting matches 0..1 run scoreboard players reset c
 execute as @a at @s store result score @s food run data get entity @s foodLevel
 execute as @a at @s if score @s food matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
 
+# Add team
+team add all
+team join all @a
+
 # Run it per 10 minute
 schedule function dragon:update 600s

@@ -49,8 +49,8 @@ execute unless score ultrasurvival setting = ultrasurvival setting run scoreboar
 execute unless score health setting = health setting run scoreboard players set health setting 1
 
 # Give effect to update the health scoreboard
-execute unless score health setting = health setting run effect give @a minecraft:instant_damage 1 0 true
-execute unless score health setting = health setting run effect give @a minecraft:regeneration 4 2 true
+execute unless score health setting = health setting run effect give @s minecraft:instant_damage 1 0 true
+execute unless score health setting = health setting run effect give @s minecraft:regeneration 4 2 true
 
 # Info text
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
@@ -71,6 +71,7 @@ tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"t
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
+
 # Add Spawnpoint and Worldspawn
 execute in the_end run spawnpoint @s 100 49 0
 execute in the_end run setworldspawn 100 49 0
@@ -81,6 +82,10 @@ execute in the_end run teleport @s 100 49 0 90 0
 # Make an obsidian platform
 execute in the_end run fill 98 48 -2 102 48 2 minecraft:obsidian
 execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
+
+# Add team
+team add all
+team join all @s
 
 # Give player current kit
 execute if score kits setting matches 0 run function dragon:init_kits/woother

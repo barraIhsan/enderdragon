@@ -2,3 +2,4 @@
 scoreboard players set actionbar setting 0
 tellraw @a "Actionbar is now disabled"
 function dragon:setting
+playsound ui.button.click master @a ~ ~ ~ 0.3
