@@ -1,3 +1,10 @@
+#---------------------------------------------------------
+# This Datapack was made by Barra Ihsan
+# Please do not copy or credit this as your own work!
+# Youtube: www.youtube.com/c/BarraIhsan
+# Github: www.github.com/barraIhsan
+#---------------------------------------------------------
+
 # If new player join, they will run this
 execute as @a[tag=!dragon_init] run function dragon:init
 
