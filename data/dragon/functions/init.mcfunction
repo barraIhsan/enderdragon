@@ -1,3 +1,10 @@
+#---------------------------------------------------------
+# This Datapack was made by Barra Ihsan
+# Please do not copy or credit this as your own work!
+# Youtube: www.youtube.com/c/BarraIhsan
+# Github: www.github.com/barraIhsan
+#---------------------------------------------------------
+
 tag @s add dragon_init
 
 # Set gamerule
