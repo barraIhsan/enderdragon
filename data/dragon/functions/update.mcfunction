@@ -37,12 +37,21 @@ execute unless score difficulty setting = difficulty setting run scoreboard play
 execute unless score enderman setting = enderman setting run scoreboard players set enderman setting 1
 execute unless score #enderman_tmp setting = #enderman_tmp setting run scoreboard players set #enderman_tmp setting 1
 execute unless score keepinventory setting = keepinventory setting run scoreboard players set keepinventory setting 1
-execute unless score kits setting = kits setting run scoreboard players set kits setting 2
-execute unless score #kits_tmp setting = #kits_tmp setting run scoreboard players set #kits_tmp setting 2
 execute unless score ultrasurvival setting = ultrasurvival setting run scoreboard players set ultrasurvival setting 0
 execute unless score health setting = health setting run scoreboard players set health setting 1
 execute unless score friendlyfire setting = friendlyfire setting run scoreboard players set friendlyfire setting 1
 execute unless score killarrow setting = killarrow setting run scoreboard players set killarrow setting 1
+
+# Add kits scoreboard
+scoreboard objectives add kits dummy
+execute unless score helmet kits = helmet kits run scoreboard players set helmet kits 4
+execute unless score chestplate kits = chestplate kits run scoreboard players set chestplate kits 4
+execute unless score leggings kits = leggings kits run scoreboard players set leggings kits 4
+execute unless score boots kits = boots kits run scoreboard players set boots kits 4
+execute unless score sword kits = sword kits run scoreboard players set sword kits 4
+execute unless score pickaxe kits = pickaxe kits run scoreboard players set pickaxe kits 4
+execute unless score axe kits = axe kits run scoreboard players set axe kits 4
+execute unless score shovel kits = shovel kits run scoreboard players set shovel kits 4
 
 # Changes crystalleft to actionbar
 execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
@@ -56,6 +65,14 @@ execute as @a at @s if score @s food matches 20 if score ultrasurvival setting m
 # Add team
 team add all
 team join all @a
+
+# Remove kits
+execute if score kits setting matches 0 run function dragon:kits_player_to_kits_objective/woother
+execute if score kits setting matches 1 run function dragon:kits_player_to_kits_objective/stomail
+execute if score kits setting matches 2 run function dragon:kits_player_to_kits_objective/iron
+execute if score kits setting matches 3 run function dragon:kits_player_to_kits_objective/diamond
+execute if score kits setting matches 4 run function dragon:kits_player_to_kits_objective/netherite
+execute if score kits setting matches 0..4 run scoreboard players reset kits setting
 
 # Run it per 10 minute
 schedule function dragon:update 600s

@@ -1,0 +1,354 @@
+{
+	"providers": [
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/barrier.png",
+			"ascent": 8,
+			"height": 9,
+			"chars": ["\uE000"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE100"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE200"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE300"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE400"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE500"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE600"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/turtle_helmet.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE001"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE101"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE201"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE301"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE401"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE501"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_chestplate.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE601"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE102"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE202"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE302"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE402"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE502"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_leggings.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE602"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:dragon/leather_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE103"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE203"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chainmail_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE303"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE403"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE503"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_boots.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE603"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/wooden_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE104"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE204"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/stone_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE304"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE404"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE504"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_sword.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE604"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/wooden_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE105"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE205"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/stone_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE305"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE405"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE505"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_pickaxe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE605"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/wooden_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE106"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE206"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/stone_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE306"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE406"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE506"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_axe.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE606"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/wooden_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE107"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/golden_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE207"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/stone_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE307"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE407"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/diamond_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE507"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/netherite_shovel.png",
+			"ascent": 9,
+			"height": 12,
+			"chars": ["\uE607"]
+		}
+	]
+}
