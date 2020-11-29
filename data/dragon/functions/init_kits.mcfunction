@@ -72,6 +72,7 @@ execute if score shovel kits matches 5 run replaceitem entity @s hotbar.4 diamon
 execute if score shovel kits matches 6 run replaceitem entity @s hotbar.4 netherite_shovel{Unbreakable:1b}
 
 # Generic
+replaceitem entity @s weapon.offhand shield{Unbreakable:1b}
 replaceitem entity @s inventory.0 arrow 16
 replaceitem entity @s inventory.9 carved_pumpkin{Unbreakable:1b}
 replaceitem entity @s inventory.18 crossbow{Unbreakable:1b}
