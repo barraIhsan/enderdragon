@@ -39,15 +39,15 @@ This datapack is only for version 1.16+, and compatible with multiplayer!
 
 ## Setting
 
-| Setting Name        | Value                                        | Default Value | Description                                      |
-| ------------------- | -------------------------------------------- | ------------- | ------------------------------------------------ |
-| Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal    | Change the Difficulty that you play on           |
-| Enderman            | Enable, Disable                              | Enable        | Enderman that naturally spawn                    |
-| Dragon Fireball     | Enable, Disable                              | Enable        | Dragon Fireball that was shoot by Ender Dragon   |
-| Keep Inventory      | Enable, Disable                              | Enable        | Keep your item when you die                      |
-| Ultra Survival      | Enable, Disable                              | Disable       | Natural Regeneration                             |
-| Glass Bottle        | Enable, Disable                              | Enable        | To clear all the Dragon Breath                   |
-| Actionbar           | Enable, Disable                              | Enable        | Interactive and Useful Actionbar                 |
-| Unable to drop item | Enable, Disable                              | Enable        | All item cant be dropped                         |
-| Health              | Enable, Disable                              | Enable        | Tell you people health                           |
-| Kits                | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Select a different Kit to fight The Ender Dragon |
+| Setting Name        | Value                                        | Default    | Description                                      |
+| ------------------- | -------------------------------------------- | ---------- | ------------------------------------------------ |
+| Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal | Change the Difficulty that you play on           |
+| Enderman            | Enable, Disable                              | Enable     | Enderman that naturally spawn                    |
+| Dragon Fireball     | Enable, Disable                              | Enable     | Dragon Fireball that was shoot by Ender Dragon   |
+| Keep Inventory      | Enable, Disable                              | Enable     | Keep your item when you die                      |
+| Ultra Survival      | Enable, Disable                              | Disable    | Natural Regeneration                             |
+| Glass Bottle        | Enable, Disable                              | Enable     | To clear all the Dragon Breath                   |
+| Actionbar           | Enable, Disable                              | Enable     | Interactive and useful actionbar                 |
+| Unable to drop item | Enable, Disable                              | Enable     | All item cant be dropped                         |
+| Health              | Enable, Disable                              | Enable     | Tell you people health                           |
+| Kits                | Woother, Stomail, Iron, Diamond, Netherite   | Iron       | Select a different Kit to fight The Ender Dragon |

@@ -13,7 +13,7 @@ Kamu bisa latihan melawan Ender Dragon dengan menggunakkan datapack ini
 
 ## Info
 
-Buat **WORLD BARU** hanya untuk datapack ini, karena nanti spawnpointmu berada di the end. 
+Buat **WORLD BARU** hanya untuk datapack ini, karena nanti spawnpointmu berada di the end.
 
 Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 
@@ -39,15 +39,15 @@ Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 
 ## Setting
 
-| Nama Setting          | Nilai                                        | Nilai Default | Deskripsi                                                    |
-| --------------------- | -------------------------------------------- | ------------- | ------------------------------------------------------------ |
-| Difficulty            | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal    | Ganti Difficulty yang kamu mainkan                           |
-| Enderman              | Aktifkan, Nonaktifkan                        | Aktif         | Enderman yg spawn natural                                    |
-| Dragon Fireball       | Aktifkan, Nonaktifkan                        | Aktif         | -                                                            |
-| Keep Inventory        | Aktifkan, Nonaktifkan                        | Aktif         | -                                                            |
-| Ultra Survival        | Aktifkan, Nonaktifkan                        | Nonaktif      | Natural Regenerationnya nonaktif                             |
-| Glass Bottle          | Aktifkan, Nonaktifkan                        | Aktif         | Untuk membersihkan Dragon Breath                             |
-| End Crystal Actionbar | Aktifkan, Nonaktifkan                        | Aktif         | Memberi tau tau kamu berapa end crystal lagi untuk diancurin |
-| Unable to drop item   | Aktifkan, Nonaktifkan                        | Aktif         | -                                                            |
-| Health                | Aktifkan, Nonaktifkan                        | Aktif         | Memberi tahu health orang                                    |
-| Kits                  | Woother, Stomail, Iron, Diamond, Netherite   | Iron          | Memilih kit yang berbeda untuk melawan Ender Dragon          |
+| Nama Setting        | Nilai                                        | Default    | Deskripsi                                           |
+| ------------------- | -------------------------------------------- | ---------- | --------------------------------------------------- |
+| Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal | Ganti Difficulty yang kamu mainkan                  |
+| Enderman            | Enable, Disable                              | Enable     | Enderman yg spawn secara natural                    |
+| Dragon Fireball     | Enable, Disable                              | Enable     | Dragon Fireball yang ditembakkan oleh Ender Dragon  |
+| Keep Inventory      | Enable, Disable                              | Enable     | Simpan barang kamu saat kamu mati                   |
+| Ultra Survival      | Enable, Disable                              | Disable    | Natural Regeneration                                |
+| Glass Bottle        | Enable, Disable                              | Enable     | Untuk membersihkan Dragon Breath                    |
+| Actionbar           | Enable, Disable                              | Enable     | Actionbar yang interaktif dan berguna               |
+| Unable to drop item | Enable, Disable                              | Enable     | Semua item tidak bisa di drop                       |
+| Health              | Enable, Disable                              | Enable     | Memberi tahu health orang                           |
+| Kits                | Woother, Stomail, Iron, Diamond, Netherite   | Iron       | Memilih kit yang berbeda untuk melawan Ender Dragon |
