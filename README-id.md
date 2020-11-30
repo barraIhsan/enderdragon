@@ -1,4 +1,4 @@
-# Latihan Ender Dragon - Datapack
+# Latihan Ender Dragon
 
 Bahasa : [English](README.md "English") | **Indonesia**
 

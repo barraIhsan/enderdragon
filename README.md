@@ -1,4 +1,4 @@
-# Ender Dragon Practice - Datapack
+# Ender Dragon Practice
 
 Language : **English** | [Indonesia](README-id.md "Indonesia")
 
