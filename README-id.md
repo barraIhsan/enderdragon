@@ -39,6 +39,8 @@ Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 
 ## Setting
 
+### Normal Setting
+
 | Nama Setting        | Nilai                                        | Default    | Deskripsi                                           |
 | ------------------- | -------------------------------------------- | ---------- | --------------------------------------------------- |
 | Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal | Ganti Difficulty yang kamu mainkan                  |
@@ -51,3 +53,18 @@ Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 | Unable to drop item | Enable, Disable                              | Enable     | Semua item tidak bisa di drop                       |
 | Health              | Enable, Disable                              | Enable     | Memberi tahu health orang                           |
 | Kits                | Woother, Stomail, Iron, Diamond, Netherite   | Iron       | Memilih kit yang berbeda untuk melawan Ender Dragon |
+| Kits                | »                                            | »          | Pergi ke Kits Setting                               |
+
+### Kits Setting
+
+| Nama Setting | Nilai                                                            | Default | Deskripsi                        |
+| ------------ | ---------------------------------------------------------------- | ------- | -------------------------------- |
+| Helmet       | None, Leather, Gold, Chainmail, Iron, Diamond, Netherite, Turtle | Iron    | Ganti helmet yang kamu pakai     |
+| Chestplate   | None, Leather, Gold, Chainmail, Iron, Diamond, Netherite         | Iron    | Ganti chestplate yang kamu pakai |
+| Leggings     | None, Leather, Gold, Chainmail, Iron, Diamond, Netherite         | Iron    | Ganti leggings yang kamu pakai   |
+| Boots        | None, Leather, Gold, Chainmail, Iron, Diamond, Netherite         | Iron    | Ganti boots yang kamu pakai      |
+| Sword        | None, Wooden, Gold, Chainmail, Iron, Diamond, Netherite          | Iron    | Ganti sword yang kamu pakai      |
+| Pickaxe      | None, Wooden, Gold, Chainmail, Iron, Diamond, Netherite          | Iron    | Ganti pickaxe yang kamu pakai    |
+| Axe          | None, Wooden, Gold, Chainmail, Iron, Diamond, Netherite          | Iron    | Ganti axe yang kamu pakai        |
+| Shovel       | None, Wooden, Gold, Chainmail, Iron, Diamond, Netherite          | Iron    | Ganti shovel yang kamu pakai     |
+| Setting      | «                                                                | «       | Pergi ke Setting                 |
