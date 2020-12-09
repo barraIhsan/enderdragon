@@ -66,9 +66,9 @@ execute unless score pickaxe kits = pickaxe kits run scoreboard players set pick
 execute unless score axe kits = axe kits run scoreboard players set axe kits 4
 execute unless score shovel kits = shovel kits run scoreboard players set shovel kits 4
 
-# Give effect to update the health scoreboard
-execute unless score health setting = health setting run effect give @s minecraft:instant_damage 1 0 true
-execute unless score health setting = health setting run effect give @s minecraft:regeneration 4 2 true
+# Update the health scoreboard
+execute as @a at @s store result score @s food run data get entity @s foodLevel
+execute as @a at @s if score @s food matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
 
 # Info text
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
