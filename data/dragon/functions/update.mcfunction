@@ -16,7 +16,6 @@ scoreboard objectives add ArrowUsed dummy "Arrow Used"
 scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
-scoreboard objectives add missedEC dummy
 scoreboard objectives add health health {"text": "❤","color": "red"}
 scoreboard objectives add food dummy
 
@@ -73,6 +72,9 @@ execute if score kits setting matches 2 run function dragon:kits_player_to_kits_
 execute if score kits setting matches 3 run function dragon:kits_player_to_kits_objective/diamond
 execute if score kits setting matches 4 run function dragon:kits_player_to_kits_objective/netherite
 execute if score kits setting matches 0..4 run scoreboard players reset kits setting
+
+# Remove missedEC objectives
+scoreboard objectives remove missedEC
 
 # Run it per 10 minute
 schedule function dragon:update 600s
