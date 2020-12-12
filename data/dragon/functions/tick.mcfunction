@@ -31,19 +31,19 @@ execute if score $timer1 timer matches 240 run scoreboard players set $timer1 ti
 execute if score killarrow setting matches 1 run kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove fire from end crystal
-execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
 
 # Turn off fire damage if there is no dragon
 execute unless entity @e[type=minecraft:ender_dragon] run effect give @a fire_resistance 1 0 true
 
 # Remove end portal from end fountain
-execute in the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run fill 3 ~-5 -3 -3 ~5 3 air replace minecraft:end_portal
 
 # Clear iron bars
 clear @a iron_bars 1
 
 # Add actionbar that show you how many End Crystal left
-execute if score actionbar setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal,x=0]
+execute if score actionbar setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal]
 execute if score actionbar setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 2 : Fight the Ender Dragon!","color":"light_purple"}]
 execute if score actionbar setting matches 1 if score endcrystal endcrystal matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 1 : Destroy All Crystal! (","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"},"color":"light_purple"},{"text": " / 10)","color": "light_purple"}]
 
@@ -139,10 +139,10 @@ scoreboard players reset @a BowUsed
 scoreboard players reset @a CrossbowUsed
 
 # Execute at end portal the misplaced code
-execute in minecraft:the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker,distance=0..] run function dragon:endcrystal/end_crystals
+execute in minecraft:the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run function dragon:endcrystal/end_crystals
 
 # Set all end crystal in end fountain to invulnerable
-execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0,z=3,distance=..3,limit=1,sort=nearest] Invulnerable set value 1b
-execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=-2.5,z=0.5,distance=..3,limit=1,sort=nearest] Invulnerable set value 1b
-execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0.5,z=-2.5,distance=..3,limit=1,sort=nearest] Invulnerable set value 1b
-execute in the_end unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=3.5,z=0.5,distance=..3,limit=1,sort=nearest] Invulnerable set value 1b
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0,z=3,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=-2.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0.5,z=-2.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=3.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
