@@ -139,7 +139,7 @@ scoreboard players reset @a BowUsed
 scoreboard players reset @a CrossbowUsed
 
 # Execute at end portal the misplaced code
-execute in minecraft:the_end at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run function dragon:endcrystal/end_crystals
+execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run function dragon:endcrystal/end_crystals
 
 # Set all end crystal in end fountain to invulnerable
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0,z=3,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
