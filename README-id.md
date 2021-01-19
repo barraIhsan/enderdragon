@@ -41,19 +41,20 @@ Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 
 ### Normal Setting
 
-| Nama Setting        | Nilai                                        | Default    | Deskripsi                                           |
-| ------------------- | -------------------------------------------- | ---------- | --------------------------------------------------- |
-| Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal | Ganti Difficulty yang kamu mainkan                  |
-| Enderman            | Enable, Disable                              | Enable     | Enderman yg spawn secara natural                    |
-| Dragon Fireball     | Enable, Disable                              | Enable     | Dragon Fireball yang ditembakkan oleh Ender Dragon  |
-| Keep Inventory      | Enable, Disable                              | Enable     | Simpan barang kamu saat kamu mati                   |
-| Ultra Survival      | Enable, Disable                              | Disable    | Natural Regeneration                                |
-| Glass Bottle        | Enable, Disable                              | Enable     | Untuk membersihkan Dragon Breath                    |
-| Actionbar           | Enable, Disable                              | Enable     | Actionbar yang interaktif dan berguna               |
-| Unable to drop item | Enable, Disable                              | Enable     | Semua item tidak bisa di drop                       |
-| Health              | Enable, Disable                              | Enable     | Memberi tahu health orang                           |
-| Kits                | Woother, Stomail, Iron, Diamond, Netherite   | Iron       | Memilih kit yang berbeda untuk melawan Ender Dragon |
-| Kits                | »                                            | »          | Pergi ke Kits Setting                               |
+| Nama Setting        | Nilai                                        | Default    | Deskripsi                                          |
+| ------------------- | -------------------------------------------- | ---------- | -------------------------------------------------- |
+| Difficulty          | (P) Peaceful, (E) Easy, (N) Normal, (H) Hard | (N) Normal | Ganti Difficulty yang kamu mainkan                 |
+| Enderman            | Enable, Disable                              | Enable     | Enderman yg spawn secara natural                   |
+| Dragon Fireball     | Enable, Disable                              | Enable     | Dragon Fireball yang ditembakkan oleh Ender Dragon |
+| Keep Inventory      | Enable, Disable                              | Enable     | Simpan barang kamu saat kamu mati                  |
+| Ultra Survival      | Enable, Disable                              | Disable    | Natural Regeneration                               |
+| Glass Bottle        | Enable, Disable                              | Enable     | Untuk membersihkan Dragon Breath                   |
+| Actionbar           | Enable, Disable                              | Enable     | Actionbar yang interaktif dan berguna              |
+| Unable to drop item | Enable, Disable                              | Enable     | Semua item tidak bisa di drop                      |
+| Health              | Enable, Disable                              | Enable     | Memberi tahu health orang                          |
+| Kill Arrow          | Enable, Disable                              | Enable     | Kill arrow ketika landing                          |
+| Friendly Fire       | Enable, Disable                              | Enable     | Tidak bisa saling menyakiti                        |
+| Kits                | »                                            | »          | Pergi ke Kits Setting                              |
 
 ### Kits Setting
 

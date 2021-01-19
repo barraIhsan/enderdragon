@@ -52,6 +52,8 @@ This datapack is only for version 1.16+, and compatible with multiplayer!
 | Actionbar           | Enable, Disable                              | Enable     | Interactive and useful actionbar               |
 | Unable to drop item | Enable, Disable                              | Enable     | All item cant be dropped                       |
 | Health              | Enable, Disable                              | Enable     | Tell you people health                         |
+| Kill Arrow          | Enable, Disable                              | Enable     | Kill arrow when landing                        |
+| Friendly Fire       | Enable, Disable                              | Enable     | Can't hit each other                           |
 | Kits                | »                                            | »          | Go To Kits Setting                             |
 
 ### Kits Setting
