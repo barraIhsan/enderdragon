@@ -5,6 +5,10 @@
 # Github: www.github.com/barraIhsan
 #---------------------------------------------------------
 
+# Run load function for the first time
+execute unless score dragonfireball setting = dragonfireball setting unless entity @a[tag=dragon_init] run function dragon:load
+
+# Give a tag to the person
 tag @s add dragon_init
 
 # Set gamerule
