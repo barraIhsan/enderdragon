@@ -7,7 +7,7 @@ tellraw @s ["",{"text":"              Ender Dragon Practice "},{"text":"/","colo
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @s ["",{"text": "\n\n"}]
+tellraw @s ["",{"text": "\n"}]
 
 # Change Helmet Message
 execute if score helmet kits matches 0 run tellraw @s ["",{"text": "[ ","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:setting_kits/helmet/leather"},"hoverEvent": {"action": "show_text","contents": "Click to set the helmet to Leather"}},{"translate":"%1$s","with":[{"text":"None","color": "red"},{"text":"\uE000"}],"clickEvent": {"action": "run_command","value": "/function dragon:setting_kits/helmet/leather"},"hoverEvent": {"action": "show_text","contents": "Click to set the helmet to Leather"}},{"text": " ]","color": "red","clickEvent": {"action": "run_command","value": "/function dragon:setting_kits/helmet/leather"},"hoverEvent": {"action": "show_text","contents": "Click to set the helmet to Leather"}},{"text": " Helmet"}]

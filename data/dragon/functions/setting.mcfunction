@@ -59,6 +59,4 @@ execute if score friendlyfire setting matches 1 run tellraw @s ["",{"text": "[ â
 # Go to kits page
 tellraw @s ["",{"text":"[ Â» ]","color":"#b5b5b5","clickEvent":{"action":"run_command","value":"/function dragon:setting_kits"},"hoverEvent": {"action": "show_text","contents": {"text": "Click to the Kits Page"}}},{"text":" Kits"}]
 
-tellraw @s ["",{"text": "\n"}]
-
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
