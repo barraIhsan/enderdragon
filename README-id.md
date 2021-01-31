@@ -24,7 +24,7 @@ Klik [disini](https://github.com/barraIhsan/enderdragon/releases) untuk pergi ke
 
 ## Download Datapack
 
-1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-v1.4.zip "Download versi terbaru dari datapacknya") untuk mendownload versi terbaru dari datapacknya.
+1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-v1.5.zip "Download versi terbaru dari datapacknya") untuk mendownload versi terbaru dari datapacknya.
 2. Buka Minecraft.
 3. Pilih world yang kamu mau download datapack ini, klik `Edit`, dan `Open world folder`.
 4. Buka folder yang bernama `datapacks`, dan taruh datapacknya disitu.
@@ -33,7 +33,7 @@ Klik [disini](https://github.com/barraIhsan/enderdragon/releases) untuk pergi ke
 
 ## Download Resourcepack
 
-1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-Resourcepack-v1.4.zip "Download versi terbaru dari resourcepacknya") untuk mendownload versi terbaru dari resourcepacknya.
+1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-Resourcepack-v1.5.zip "Download versi terbaru dari resourcepacknya") untuk mendownload versi terbaru dari resourcepacknya.
 2. Buka folder `Downloads`
 3. Copy file `.zip`nya
 4. Buka Minecraft
