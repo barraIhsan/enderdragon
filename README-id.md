@@ -7,6 +7,7 @@ Kamu bisa latihan melawan Ender Dragon dengan menggunakkan datapack ini
 ## Daftar Isi
 
 -   [Info](#info)
+-   [Releases](#releases)
 -   [Download Datapack](#download-datapack)
 -   [Download Resourcepack](#download-resourcepack)
 -   [Setting](#setting)
@@ -17,25 +18,29 @@ Buat **WORLD BARU** hanya untuk datapack ini, karena nanti spawnpointmu berada d
 
 Datapack ini hanya tersedia di versi 1.16+, dan bisa multiplayer!
 
+## Releases
+
+Klik [disini](https://github.com/barraIhsan/enderdragon/releases) untuk pergi ke halaman releases
+
 ## Download Datapack
 
-1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.3/Ender-Dragon-Practice-v1.3.zip "Download versi terbaru dari datapacknya") untuk mendownload versi terbaru dari datapacknya.
+1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-v1.4.zip "Download versi terbaru dari datapacknya") untuk mendownload versi terbaru dari datapacknya.
 2. Buka Minecraft.
 3. Pilih world yang kamu mau download datapack ini, klik `Edit`, dan `Open world folder`.
 4. Buka folder yang bernama `datapacks`, dan taruh datapacknya disitu.
 5. Tulis `/reload` (Jika kamu menyalakan cheats).
-6. Jika datapacknya benar, seharusnya sudah aktif di worldnya. Jika kamu menyalakan cheats, kamu bisa coba tulis `/datapack list enabled` dan cari tulisan `file/Ender-Dragon-Practice-v1.3.zip`.
+6. Jika datapacknya benar, seharusnya sudah aktif di worldnya. Jika kamu menyalakan cheats, kamu bisa coba tulis `/datapack list enabled` dan cari tulisan `file/Ender-Dragon-Practice-v1.4.zip`.
 
 ## Download Resourcepack
 
-1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.3/Ender-Dragon-Practice-v1.3.zip "Download versi terbaru dari datapacknya") untuk mendownload versi terbaru dari resourcepacknya.
+1. Klik [disini](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-Resourcepack-v1.4.zip "Download versi terbaru dari resourcepacknya") untuk mendownload versi terbaru dari resourcepacknya.
 2. Buka folder `Downloads`
 3. Copy file `.zip`nya
 4. Buka Minecraft
 5. Klik `Options`, dan `Resource Packs`
 6. Klik `Open resource pack folder`
 7. Paste filenya ke folder `resourcepacks` di Minecraft
-8. Kembali ke Minecraft, resourcepacknya seharusnya ada (Kalau tidak ada, pergi ke main menu dengan menekan tombol `Esc` dan ulangi langkah kelima) dan kamu bisa aktifkan dengan cara memilihnya dan tekan tombol `Done`. Gamenya bakal reload sendiri.
+8. Kembali ke Minecraft, resourcepacknya seharusnya ada (Kalau tidak ada, pergi ke main menu dengan menekan tombol `Esc` dan ulangi langkah nomor 5) dan kamu bisa aktifkan dengan cara memilihnya dan tekan tombol `Done`. Gamenya bakal reload sendiri.
 
 ## Setting
 

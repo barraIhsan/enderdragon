@@ -7,6 +7,7 @@ This datapack allows you to practice the Ender dragon
 ## Table of contents
 
 -   [Info](#info)
+-   [Releases](#releases)
 -   [Download Datapack](#download-datapack)
 -   [Download Resourcepack](#download-resourcepack)
 -   [Setting](#setting)
@@ -17,9 +18,12 @@ Please make a **NEW WORLD** only for this datapack, because your spawnpoint will
 
 This datapack is only for version 1.16+, and compatible with multiplayer!
 
+## Releases
+
+Click [here](https://github.com/barraIhsan/enderdragon/releases) to go to releases page
 ## Download Datapack
 
-1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.3/Ender-Dragon-Practice-v1.3.zip "Download the latest version of the datapack") to download the latest version of the datapack.
+1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-v1.4.zip "Download the latest version of the datapack") to download the latest version of the datapack.
 2. Open Minecraft.
 3. Select the world you want to install the data pack for, click on `Edit`, then `Open world folder`.
 4. Open the folder named `datapacks`, and put the datapack into it.
@@ -28,7 +32,7 @@ This datapack is only for version 1.16+, and compatible with multiplayer!
 
 ## Download Resourcepack
 
-1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.3/Ender-Dragon-Practice-v1.3.zip "Download the latest version of the resourcepack") to download the latest version of the resourcepack.
+1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-Resourcepack-v1.4.zip "Download the latest version of the resourcepack") to download the latest version of the resourcepack.
 2. Open folder `Downloads`
 3. Copy the `.zip` file
 4. Open Minecraft
