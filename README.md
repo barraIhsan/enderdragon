@@ -21,6 +21,7 @@ This datapack is only for version 1.16+, and compatible with multiplayer!
 ## Releases
 
 Click [here](https://github.com/barraIhsan/enderdragon/releases) to go to releases page
+
 ## Download Datapack
 
 1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-v1.5.zip "Download the latest version of the datapack") to download the latest version of the datapack.
