@@ -5,6 +5,9 @@
 # Github: www.github.com/barraIhsan
 #---------------------------------------------------------
 
+# Run load function for the first time
+execute unless entity @e[type=area_effect_cloud,tag=endPortalHeightMarker] run function dragon:load
+
 # If new player join, they will run this
 execute as @a[tag=!dragon_init] run function dragon:init
 
