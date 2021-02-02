@@ -36,6 +36,14 @@ scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add health health {"text": "❤","color": "red"}
 scoreboard objectives add food dummy
 
+# Add 0 to score
+scoreboard players add @s KillDragon 0
+scoreboard players add @s KilledByDragon 0
+scoreboard players add @s BreadUsed 0
+scoreboard players add @s DirtUsed 0
+scoreboard players add @s GlassBottleUsed 0
+scoreboard players add @s ArrowUsed 0
+
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
 scoreboard players add endcrystal endcrystal 0
