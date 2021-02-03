@@ -78,6 +78,9 @@ execute unless score shovel kits = shovel kits run scoreboard players set shovel
 execute as @a at @s store result score @s food run data get entity @s foodLevel
 execute as @a at @s if score @s food matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
 
+# Title
+function dragon:title_init/run
+
 # Info text
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
@@ -85,14 +88,14 @@ tellraw @p ["",{"text":"                       Ender Dragon Practice            
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @s ["",{"text": "\n"},{"text":"                  Make sure you have read "},{"text": "README","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/blob/master/README.md"},"hoverEvent": {"action": "show_text","contents": "Click to Read README!"}},{"text": "\n"},{"text": "                   AND download the "},{"text": "Recourcepack!","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-Resourcepack-v1.5.zip"},"hoverEvent": {"action": "show_text","contents": "Click to download my recourcepack!"}},{"text": "\n"}]
+tellraw @s ["",{"text": "\n"},{"text":"                  Make sure you have read "},{"text": "README","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/blob/master/README.md"},"hoverEvent": {"action": "show_text","contents": "Click to Read README!"}},{"text": "\n"},{"text": "                   AND download the "},{"text": "Recourcepack!","color": "blue","clickEvent": {"action": "open_url","value": "https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-Resourcepack-v1.5.zip"},"hoverEvent": {"action": "show_text","contents": "Click to download my recourcepack!"}},{"text": "\n\n"}]
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
 tellraw @s ["",{"text":"                           [ Open Setting ]","color":"green","clickEvent":{"action":"run_command","value":"/function dragon:setting"},"hoverEvent": {"action": "show_text","contents": "Requires OP"}}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [ Twitter ] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [ YouTube ] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://youtube.com/barraIhsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [ GitHub ] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n"}]
+tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [ Twitter ] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [ YouTube ] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://youtube.com/barraIhsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [ GitHub ] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n\n"}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
