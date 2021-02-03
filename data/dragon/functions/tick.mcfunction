@@ -113,25 +113,7 @@ execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] 
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"               Ender Dragon Practice "},{"text":"/","color":"gray"},{"text":" Statistics                  "}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text": "[ ","color": "green"},{"score": {"objective": "KillDragon","name": "@s"},"color": "green"},{"text": " ] ","color": "green"},{"text": "Kill Dragon"},{"text": "\n"},{"text": "[ ","color": "red"},{"score": {"objective": "KilledByDragon","name": "@s"},"color": "red"},{"text": " ] ","color": "red"},{"text": "Killed By Dragon"},{"text": "\n"},{"text": "[ ","color": "#79553A"},{"score": {"objective": "DirtUsed","name": "@s"},"color": "#79553A"},{"text": " ] ","color": "#79553A"},{"text": "Dirt Used"},{"text": "\n"},{"text": "[ ","color": "#BC8927"},{"score": {"objective": "BreadUsed","name": "@s"},"color": "#BC8927"},{"text": " ] ","color": "#BC8927"},{"text": "Bread Used"},{"text": "\n"},{"text": "[ ","color": "#444444"},{"score": {"objective": "ArrowUsed","name": "@s"},"color": "#444444"},{"text": " ] ","color": "#444444"},{"text": "Arrow Used"},{"text": "\n"},{"text": "[ ","color": "#C6C6C6"},{"score": {"objective": "GlassBottleUsed","name": "@s"},"color": "#C6C6C6"},{"text": " ] ","color": "#C6C6C6"},{"text": "Glass Bottle Used"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"                           [ Open Setting ]","color":"green","clickEvent":{"action":"run_command","value":"/function dragon:setting"},"hoverEvent": {"action": "show_text","contents": "Requires OP"}}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [ Twitter ] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [ Instagram ] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://www.instagram.com/barra.ihsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [ GitHub ] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-execute as @a if score @s WelcomeMessage matches 1 run scoreboard players set @s WelcomeMessage 0
+execute as @a[scores={WelcomeMessage=1..}] run function dragon:welcome_message
 
 # Arrow Used Scoreboard
 execute as @a run scoreboard players operation @s ArrowUsed += @s BowUsed
