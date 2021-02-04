@@ -6,4 +6,5 @@
 #---------------------------------------------------------
 
 title @a[tag=title_init] title {"text": "He","color": "green","bold": true}
+execute as @a[tag=title_init] at @s run playsound block.note_block.hat master @a[tag=title_join] ~ ~ ~ 0.1 2
 schedule function dragon:title_init/2 2t
