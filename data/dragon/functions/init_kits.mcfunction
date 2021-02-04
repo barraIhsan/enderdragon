@@ -6,6 +6,7 @@ execute if score helmet kits matches 3 run replaceitem entity @s armor.head chai
 execute if score helmet kits matches 4 run replaceitem entity @s armor.head iron_helmet{Unbreakable:1b}
 execute if score helmet kits matches 5 run replaceitem entity @s armor.head diamond_helmet{Unbreakable:1b}
 execute if score helmet kits matches 6 run replaceitem entity @s armor.head netherite_helmet{Unbreakable:1b}
+execute if score helmet kits matches 7 run replaceitem entity @s armor.head turtle_helmet{Unbreakable:1b}
 
 # Chestplate
 execute if score chestplate kits matches 0 run replaceitem entity @s armor.chest air
