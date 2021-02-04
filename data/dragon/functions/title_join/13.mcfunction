@@ -6,5 +6,5 @@
 #---------------------------------------------------------
 
 execute as @a[tag=title_join] run title @s subtitle {"selector":"@s","color": "aqua"}
-execute at @a[tag=title_join] run playsound entity.player.levelup master @a[tag=title_join] ~ ~ ~ 1 0
+execute as @a[tag=title_join] at @s run playsound entity.player.levelup master @a[tag=title_join] ~ ~ ~ 1 0
 tag @s remove title_join

@@ -6,5 +6,5 @@
 #---------------------------------------------------------
 
 execute as @a[tag=title_init] run title @s subtitle {"selector":"@s","color": "aqua"}
-execute at @a[tag=title_init] run playsound entity.player.levelup master @a[tag=title_init] ~ ~ ~ 1 0
+execute as @a[tag=title_init] at @s run playsound entity.player.levelup master @a[tag=title_init] ~ ~ ~ 1 0
 tag @s remove title_init
