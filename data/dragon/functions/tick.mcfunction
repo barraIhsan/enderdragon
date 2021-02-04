@@ -113,7 +113,7 @@ execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] 
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a[scores={WelcomeMessage=1..}] run function dragon:title_join/run
+execute as @a[scores={WelcomeMessage=1..}] run schedule function dragon:title_join/run 3s
 execute as @a[scores={WelcomeMessage=1..}] run function dragon:welcome_message
 
 # Arrow Used Scoreboard
