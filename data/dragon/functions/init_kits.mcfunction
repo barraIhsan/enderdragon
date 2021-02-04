@@ -1,3 +1,26 @@
+# Check if player wear pumpkin
+execute as @a store success score @s wear_pumpkin run data get entity @s Inventory[{Slot:103b,id:"minecraft:carved_pumpkin"}]
+
+# Clear all items that needed
+function dragon:setting_kits/helmet/clear
+function dragon:setting_kits/chestplate/clear
+function dragon:setting_kits/leggings/clear
+function dragon:setting_kits/boots/clear
+function dragon:setting_kits/sword/clear
+function dragon:setting_kits/pickaxe/clear
+function dragon:setting_kits/axe/clear
+function dragon:setting_kits/shovel/clear
+clear @s shield
+clear @s arrow
+clear @s carved_pumpkin
+clear @s crossbow
+clear @s bow
+clear @s dirt
+clear @s bread
+clear @s water_bucket
+clear @s bucket
+clear @s glass_bottle
+
 # Helmet
 execute if score helmet kits matches 0 run replaceitem entity @s armor.head air
 execute if score helmet kits matches 1 run replaceitem entity @s armor.head leather_helmet{Unbreakable:1b}
@@ -82,3 +105,14 @@ replaceitem entity @s hotbar.5 dirt 16
 replaceitem entity @s hotbar.6 bread 16
 replaceitem entity @s hotbar.7 water_bucket
 replaceitem entity @s hotbar.8 glass_bottle 16
+
+# Wear pumpkin check
+execute if score @s wear_pumpkin matches 1 run replaceitem entity @s armor.head carved_pumpkin{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 0 run replaceitem entity @s inventory.9 air
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 1 run replaceitem entity @s inventory.9 leather_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 2 run replaceitem entity @s inventory.9 golden_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 3 run replaceitem entity @s inventory.9 chainmail_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 4 run replaceitem entity @s inventory.9 iron_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 5 run replaceitem entity @s inventory.9 diamond_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 6 run replaceitem entity @s inventory.9 netherite_helmet{Unbreakable:1b}
+execute if score @s wear_pumpkin matches 1 if score helmet kits matches 7 run replaceitem entity @s inventory.9 turtle_helmet{Unbreakable:1b}
