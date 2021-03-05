@@ -64,27 +64,35 @@ execute if score $timer2 timer matches 21 if score actionbar setting matches 1 i
 
 execute if score $timer2 timer matches 22 run scoreboard players set $timer2 timer 0
 
-# Infinite dirt
-execute as @a store result score @s dirt_count run clear @s minecraft:dirt 0
-clear @a[scores={dirt_count=17..}] minecraft:dirt 1
-loot give @a[scores={dirt_count=..15}] loot minecraft:blocks/dirt
+# Infinite dirt & Remove normal dirt
+execute as @a store result score @s dirt_count run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+execute as @a unless entity @s[scores={dirt_count=64}] run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={dirt_count=0}] loot dragon:blocks/many_dirt
+# loot give @a[scores={dirt_count=1..63}] loot dragon:blocks/dirt
+clear @a dirt{dragon_custom:0b}
 
-# Infinite bread
-execute as @a store result score @s bread_count run clear @s minecraft:bread 0
-clear @a[scores={bread_count=17..}] minecraft:bread 1
-loot give @a[scores={bread_count=..15}] loot dragon:blocks/bread
+# Infinite bread & Remove normal bread
+execute as @a store result score @s bread_count run clear @s minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+clear @a[scores={bread_count=65..}] minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={bread_count=0}] loot dragon:blocks/many_bread
+loot give @a[scores={bread_count=1..63}] loot dragon:blocks/bread
+clear @a bread{dragon_custom:0b}
 
-# Infinite arrow
-execute as @a store result score @s arrow_count run clear @s minecraft:arrow 0
-clear @a[scores={arrow_count=17..}] minecraft:arrow 1
-loot give @a[scores={arrow_count=..15}] loot dragon:blocks/arrow
+# Infinite arrow & Remove normal arrow
+execute as @a store result score @s arrow_count run clear @s minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+clear @a[scores={arrow_count=65..}] minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={arrow_count=..0}] loot dragon:blocks/many_arrow
+loot give @a[scores={arrow_count=1..63}] loot dragon:blocks/arrow
+clear @a arrow{dragon_custom:0b}
 
 # Infinite glass bottle & Remove dragon breath and water bottle
-execute if score glassbottle setting matches 1 as @a store result score @s glass_count run clear @s minecraft:glass_bottle 0
-execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=17..}] minecraft:glass_bottle 1
-execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=..15}] loot dragon:blocks/glass_bottle
+execute if score glassbottle setting matches 1 as @a store result score @s glass_count run clear @s minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=65..}] minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=0}] loot dragon:blocks/many_glass_bottle
+execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=1..63}] loot dragon:blocks/glass_bottle
 execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
 execute if score glassbottle setting matches 1 run clear @a potion{Potion:"minecraft:water"} 1
+execute if score glassbottle setting matches 1 run clear @a glass_bottle{dragon_custom:0b}
 
 # Setting
 execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]

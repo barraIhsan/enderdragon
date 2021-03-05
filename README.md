@@ -24,16 +24,16 @@ Click [here](https://github.com/barraIhsan/enderdragon/releases) to go to releas
 
 ## Download Datapack
 
-1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-v1.5.zip "Download the latest version of the datapack") to download the latest version of the datapack.
+1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-v1.4.zip "Download the latest version of the datapack") to download the latest version of the datapack.
 2. Open Minecraft.
 3. Select the world you want to install the data pack for, click on `Edit`, then `Open world folder`.
 4. Open the folder named `datapacks`, and put the datapack into it.
 5. Type `/reload` (If you have enabled cheats).
-6. If the data pack has a correct format, it would be enabled in the world. If you have enabled cheats, you can verify by typing `/datapack list enabled` and find an entry named `file/Ender-Dragon-Practice-v1.3.zip`.
+6. If the data pack has a correct format, it would be enabled in the world. If you have enabled cheats, you can verify by typing `/datapack list enabled` and find an entry named `file/Ender-Dragon-Practice-v1.4.zip`.
 
 ## Download Resourcepack
 
-1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.5/Ender-Dragon-Practice-Resourcepack-v1.5.zip "Download the latest version of the resourcepack") to download the latest version of the resourcepack.
+1. Click [here](https://github.com/barraIhsan/enderdragon/releases/download/v1.4/Ender-Dragon-Practice-Resourcepack-v1.4.zip "Download the latest version of the resourcepack") to download the latest version of the resourcepack.
 2. Open folder `Downloads`
 3. Copy the `.zip` file
 4. Open Minecraft
