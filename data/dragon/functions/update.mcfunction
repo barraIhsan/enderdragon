@@ -17,7 +17,6 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add health health {"text": "❤","color": "red"}
-scoreboard objectives add food dummy
 
 # Modify the display name of health
 scoreboard objectives modify health displayname {"text": "❤","color": "red"}
@@ -58,8 +57,9 @@ execute if score crystalleft setting matches 1 run scoreboard players set action
 execute if score crystalleft setting matches 0..1 run scoreboard players reset crystalleft setting
 
 # Update the health scoreboard
-execute as @a at @s store result score @s food run data get entity @s foodLevel
-execute as @a at @s if score @s food matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
+execute store result score food setting run data get entity @s foodLevel
+execute if score food setting matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
+scoreboard players set food setting 0
 
 # Add team
 team add all
@@ -75,6 +75,7 @@ execute if score kits setting matches 0..4 run scoreboard players reset kits set
 
 # Remove missedEC objectives
 scoreboard objectives remove missedEC
+scoreboard objectives remove food
 
 # Run it per 10 minute
 schedule function dragon:update 600s

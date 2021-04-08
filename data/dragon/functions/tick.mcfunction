@@ -9,7 +9,7 @@
 execute unless entity @e[type=area_effect_cloud,tag=endPortalHeightMarker] run function dragon:load
 
 # If new player join, they will run this
-execute as @a[tag=!dragon_init] run function dragon:init
+execute as @a[tag=!dragon_init] at @s run function dragon:init
 
 # Give end crystal to who killed the Ender Dragon
 give @a[scores={DragonKiller=1..}] minecraft:end_crystal 4
@@ -121,8 +121,8 @@ execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] 
 execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a[scores={WelcomeMessage=1..}] run schedule function dragon:title_join/run 3s
-execute as @a[scores={WelcomeMessage=1..}] run function dragon:welcome_message
+execute as @a[scores={WelcomeMessage=1..}] at @s run schedule function dragon:title_join/run 3s
+execute as @a[scores={WelcomeMessage=1..}] at @s run function dragon:welcome_message
 
 # Arrow Used Scoreboard
 execute as @a run scoreboard players operation @s ArrowUsed += @s BowUsed

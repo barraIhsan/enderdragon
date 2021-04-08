@@ -34,7 +34,7 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add health health {"text": "❤","color": "red"}
-scoreboard objectives add food dummy
+scoreboard objectives add temp dummy
 
 # Add 0 to score
 scoreboard players add @s KillDragon 0
@@ -75,8 +75,9 @@ execute unless score axe kits = axe kits run scoreboard players set axe kits 4
 execute unless score shovel kits = shovel kits run scoreboard players set shovel kits 4
 
 # Update the health scoreboard
-execute as @a at @s store result score @s food run data get entity @s foodLevel
-execute as @a at @s if score @s food matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
+execute store result score food setting run data get entity @s foodLevel
+execute if score food setting matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
+scoreboard players set food setting 0
 
 # Title
 function dragon:title_init/run
@@ -84,7 +85,7 @@ function dragon:title_init/run
 # Info text
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
-tellraw @p ["",{"text":"                       Ender Dragon Practice             "}]
+tellraw @s ["",{"text":"                       Ender Dragon Practice             "}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
 
