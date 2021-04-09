@@ -1,89 +1,128 @@
 # Set version
-scoreboard players set version setting 15
+scoreboard players set version drg_global 15
 
 # Add scoreboard
-scoreboard objectives add timer dummy
-scoreboard objectives add dirt_count dummy
-scoreboard objectives add bread_count dummy
-scoreboard objectives add arrow_count dummy
-scoreboard objectives add glass_count dummy
-scoreboard objectives add crystal_count dummy
-scoreboard objectives add wear_pumpkin dummy
-scoreboard objectives add DragonKiller minecraft.killed:minecraft.ender_dragon
-scoreboard objectives add KillDragon minecraft.killed:minecraft.ender_dragon "Kill Dragon"
-scoreboard objectives add KilledByDragon minecraft.killed_by:ender_dragon "Killed By Dragon"
-scoreboard objectives add BreadUsed minecraft.used:minecraft.bread "Bread Used"
-scoreboard objectives add DirtUsed minecraft.used:minecraft.dirt "Dirt Used"
-scoreboard objectives add GlassBottleUsed minecraft.used:minecraft.glass_bottle "Glass Bottle Used"
-scoreboard objectives add ArrowUsed dummy "Arrow Used"
-scoreboard objectives add BowUsed minecraft.used:minecraft.bow
-scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
-scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
-scoreboard objectives add health health {"text": "❤","color": "red"}
+scoreboard objectives add drg_dirt dummy
+scoreboard objectives add drg_bread dummy
+scoreboard objectives add drg_arrow dummy
+scoreboard objectives add drg_glass dummy
+scoreboard objectives add drg_pumpkin dummy
+scoreboard objectives add drg_killer minecraft.killed:minecraft.ender_dragon
+scoreboard objectives add drg_kill minecraft.killed:minecraft.ender_dragon "Kill Dragon"
+scoreboard objectives add drg_killed minecraft.killed_by:ender_dragon "Killed By Dragon"
+scoreboard objectives add drg_use_bread minecraft.used:minecraft.bread "Bread Used"
+scoreboard objectives add drg_use_dirt minecraft.used:minecraft.dirt "Dirt Used"
+scoreboard objectives add drg_use_glass minecraft.used:minecraft.glass_bottle "Glass Bottle Used"
+scoreboard objectives add drg_use_arrow dummy "Arrow Used"
+scoreboard objectives add drg_use_bow minecraft.used:minecraft.bow
+scoreboard objectives add drg_use_crossbow minecraft.used:minecraft.crossbow
+scoreboard objectives add drg_join minecraft.custom:leave_game
+scoreboard objectives add drg_health health {"text": "❤","color": "red"}
 
 # Add 0 to score
-scoreboard players add @s KillDragon 0
-scoreboard players add @s KilledByDragon 0
-scoreboard players add @s BreadUsed 0
-scoreboard players add @s DirtUsed 0
-scoreboard players add @s GlassBottleUsed 0
-scoreboard players add @s ArrowUsed 0
+scoreboard players add @s drg_kill 0
+scoreboard players add @s drg_killed 0
+scoreboard players add @s drg_use_bread 0
+scoreboard players add @s drg_use_dirt 0
+scoreboard players add @s drg_use_glass 0
+scoreboard players add @s drg_use_arrow 0
 
 # Modify the display name of health
-scoreboard objectives modify health displayname {"text": "❤","color": "red"}
+scoreboard objectives modify drg_health displayname {"text": "❤","color": "red"}
 
 # Add endcrystal scoreboard
 scoreboard objectives add endcrystal dummy
-execute unless score endcrystal endcrystal = endcrystal endcrystal run scoreboard players set endcrystal endcrystal 0
+execute unless score endcrystal drg_global = endcrystal drg_global run scoreboard players set endcrystal drg_global 0
 
 # Add setting scoreboard
-scoreboard objectives add setting dummy
-execute unless score dragonfireball setting = dragonfireball setting run scoreboard players set dragonfireball setting 1
-execute unless score glassbottle setting = glassbottle setting run scoreboard players set glassbottle setting 1
-execute unless score actionbar setting = actionbar setting run scoreboard players set actionbar setting 1
-execute unless score unabletodrop setting = unabletodrop setting run scoreboard players set unabletodrop setting 1
-execute unless score difficulty setting = difficulty setting run scoreboard players set difficulty setting 2
-execute unless score enderman setting = enderman setting run scoreboard players set enderman setting 1
-execute unless score #enderman_tmp setting = #enderman_tmp setting run scoreboard players set #enderman_tmp setting 1
-execute unless score keepinventory setting = keepinventory setting run scoreboard players set keepinventory setting 1
-execute unless score ultrasurvival setting = ultrasurvival setting run scoreboard players set ultrasurvival setting 0
-execute unless score health setting = health setting run scoreboard players set health setting 1
-execute unless score friendlyfire setting = friendlyfire setting run scoreboard players set friendlyfire setting 1
-execute unless score killarrow setting = killarrow setting run scoreboard players set killarrow setting 1
+scoreboard objectives add drg_global dummy
+execute unless score dragonfireball drg_global = dragonfireball drg_global run scoreboard players set dragonfireball drg_global 1
+execute unless score glassbottle drg_global = glassbottle drg_global run scoreboard players set glassbottle drg_global 1
+execute unless score actionbar drg_global = actionbar drg_global run scoreboard players set actionbar drg_global 1
+execute unless score unabletodrop drg_global = unabletodrop drg_global run scoreboard players set unabletodrop drg_global 1
+execute unless score difficulty drg_global = difficulty drg_global run scoreboard players set difficulty drg_global 2
+execute unless score enderman drg_global = enderman drg_global run scoreboard players set enderman drg_global 1
+execute unless score #enderman_tmp drg_global = #enderman_tmp drg_global run scoreboard players set #enderman_tmp drg_global 1
+execute unless score keepinventory drg_global = keepinventory drg_global run scoreboard players set keepinventory drg_global 1
+execute unless score ultrasurvival drg_global = ultrasurvival drg_global run scoreboard players set ultrasurvival drg_global 0
+execute unless score health drg_global = health drg_global run scoreboard players set health drg_global 1
+execute unless score friendlyfire drg_global = friendlyfire drg_global run scoreboard players set friendlyfire drg_global 1
+execute unless score killarrow drg_global = killarrow drg_global run scoreboard players set killarrow drg_global 1
 
 # Add kits scoreboard
-scoreboard objectives add kits dummy
-execute unless score helmet kits = helmet kits run scoreboard players set helmet kits 4
-execute unless score chestplate kits = chestplate kits run scoreboard players set chestplate kits 4
-execute unless score leggings kits = leggings kits run scoreboard players set leggings kits 4
-execute unless score boots kits = boots kits run scoreboard players set boots kits 4
-execute unless score sword kits = sword kits run scoreboard players set sword kits 4
-execute unless score pickaxe kits = pickaxe kits run scoreboard players set pickaxe kits 4
-execute unless score axe kits = axe kits run scoreboard players set axe kits 4
-execute unless score shovel kits = shovel kits run scoreboard players set shovel kits 4
+scoreboard objectives add drg_kits dummy
+execute unless score helmet drg_kits = helmet drg_kits run scoreboard players set helmet drg_kits 4
+execute unless score chestplate drg_kits = chestplate drg_kits run scoreboard players set chestplate drg_kits 4
+execute unless score leggings drg_kits = leggings drg_kits run scoreboard players set leggings drg_kits 4
+execute unless score boots drg_kits = boots drg_kits run scoreboard players set boots drg_kits 4
+execute unless score sword drg_kits = sword drg_kits run scoreboard players set sword drg_kits 4
+execute unless score pickaxe drg_kits = pickaxe drg_kits run scoreboard players set pickaxe drg_kits 4
+execute unless score axe drg_kits = axe drg_kits run scoreboard players set axe drg_kits 4
+execute unless score shovel drg_kits = shovel drg_kits run scoreboard players set shovel drg_kits 4
 
 # Changes crystalleft to actionbar
-execute if score crystalleft setting matches 0 run scoreboard players set actionbar setting 0
-execute if score crystalleft setting matches 1 run scoreboard players set actionbar setting 1
-execute if score crystalleft setting matches 0..1 run scoreboard players reset crystalleft setting
+execute if score crystalleft drg_global matches 0 run scoreboard players set actionbar drg_global 0
+execute if score crystalleft drg_global matches 1 run scoreboard players set actionbar drg_global 1
+execute if score crystalleft drg_global matches 0..1 run scoreboard players reset crystalleft drg_global
 
 # Update the health scoreboard
-execute store result score food setting run data get entity @s foodLevel
-execute if score food setting matches 20 if score ultrasurvival setting matches 0 unless score @s health matches -2147483648..2147483647 run tp ~ ~4 ~
-scoreboard players set food setting 0
+execute if score ultrasurvival drg_global matches 0 unless score @s drg_health matches -2147483648..2147483647 run tp ~ ~4 ~
 
 # Add team
 team add all
 team join all @a
 
 # Remove kits
-execute if score kits setting matches 0 run function dragon:kits_player_to_kits_objective/woother
-execute if score kits setting matches 1 run function dragon:kits_player_to_kits_objective/stomail
-execute if score kits setting matches 2 run function dragon:kits_player_to_kits_objective/iron
-execute if score kits setting matches 3 run function dragon:kits_player_to_kits_objective/diamond
-execute if score kits setting matches 4 run function dragon:kits_player_to_kits_objective/netherite
-execute if score kits setting matches 0..4 run scoreboard players reset kits setting
+execute if score kits drg_global matches 0 run function dragon:kits_player_to_kits_objective/woother
+execute if score kits drg_global matches 1 run function dragon:kits_player_to_kits_objective/stomail
+execute if score kits drg_global matches 2 run function dragon:kits_player_to_kits_objective/iron
+execute if score kits drg_global matches 3 run function dragon:kits_player_to_kits_objective/diamond
+execute if score kits drg_global matches 4 run function dragon:kits_player_to_kits_objective/netherite
+execute if score kits drg_global matches 0..4 run scoreboard players reset kits drg_global
 
-# Remove objectives
-scoreboard objectives remove missedEC
+# Move objectives
+scoreboard players operation timer_sidebar drg_global = $timer1 timer
+scoreboard players operation timer_actionbar drg_global = $timer2 timer
+scoreboard players operation difficulty drg_global = difficulty setting
+scoreboard players operation enderman drg_global = enderman setting
+scoreboard players operation dragonfireball drg_global = dragonfireball setting
+scoreboard players operation keepinventory drg_global = keepinventory setting
+scoreboard players operation ultrasurvival drg_global = ultrasurvival setting
+scoreboard players operation actionbar drg_global = actionbar setting
+scoreboard players operation unabletodrop drg_global = unabletodrop setting
+scoreboard players operation health drg_global = health setting
+scoreboard players operation friendlyfire drg_global = friendlyfire setting
+scoreboard players operation helmet drg_kits = helmet kits
+scoreboard players operation chestplate drg_kits = chestplate kits
+scoreboard players operation leggings drg_kits = leggings kits
+scoreboard players operation boots drg_kits = boots kits
+scoreboard players operation sword drg_kits = sword kits
+scoreboard players operation pickaxe drg_kits = pickaxe kits
+scoreboard players operation axe drg_kits = axe kits
+scoreboard players operation shovel drg_kits = shovel kits
+scoreboard objectives remove timer
+scoreboard objectives remove dirt_count
+scoreboard objectives remove bread_count
+scoreboard objectives remove arrow_count
+scoreboard objectives remove glass_count
+scoreboard objectives remove crystal_count
+scoreboard objectives remove wear_pumpkin
+scoreboard objectives remove DragonKiller
+scoreboard objectives remove KillDragon
+scoreboard objectives remove KilledByDragon
+scoreboard objectives remove BreadUsed
+scoreboard objectives remove DirtUsed
+scoreboard objectives remove GlassBottleUsed
+scoreboard objectives remove ArrowUsed
+scoreboard objectives remove BowUsed
+scoreboard objectives remove CrossbowUsed
+scoreboard objectives remove WelcomeMessage
+scoreboard objectives remove health
+scoreboard objectives remove setting
+scoreboard objectives remove kits
 scoreboard objectives remove food
+scoreboard objectives remove endcrystal
+scoreboard players reset food drg_global
+
+# Message
+tellraw @a ["",{"text": "Ender Dragon Practice","color": "green"},{"text": " has been updated to version "},{"text": "1.5!","color": "blue","bold": true}]

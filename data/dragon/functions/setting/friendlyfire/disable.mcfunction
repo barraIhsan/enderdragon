@@ -1,5 +1,5 @@
 # Disable Friendly Fire & Telling that Friendly Fire has been disabled
-scoreboard players set friendlyfire setting 0
+scoreboard players set friendlyfire drg_global 0
 team join all @a
 tellraw @a "Friendly Fire is now disabled"
 function dragon:setting

@@ -1,8 +1,8 @@
 #---------------------------------------------------------
 # This Datapack was made by Barra Ihsan
 # Please do not copy or credit this as your own work!
-# Youtube: www.youtube.com/c/BarraIhsan
-# Github: www.github.com/barraIhsan
+# Youtube: youtube.com/barraIhsan
+# Github: github.com/barraIhsan
 #---------------------------------------------------------
 
 # Run load function for the first time
@@ -12,26 +12,26 @@ execute unless entity @e[type=area_effect_cloud,tag=endPortalHeightMarker] run f
 execute as @a[tag=!dragon_init] at @s run function dragon:init
 
 # Give end crystal to who killed the Ender Dragon
-give @a[scores={DragonKiller=1..}] minecraft:end_crystal 4
+give @a[scores={drg_killer=1..}] minecraft:end_crystal 4
 
 # Tell who killed The Ender Dragon
-execute if entity @a[scores={DragonKiller=1..}] run tellraw @a ["",{"text":"The Ender Dragon was killed by "},{"selector":"@a[scores={DragonKiller=1..}]"}]
+execute if entity @a[scores={drg_killer=1..}] run tellraw @a ["",{"text":"The Ender Dragon was killed by "},{"selector":"@a[scores={drg_killer=1..}]"}]
 
 # Reset the DragonKiller scoreboard
-scoreboard players set @a DragonKiller 0
+scoreboard players set @a drg_killer 0
 
 # Add scoreboard timer
-scoreboard players add $timer1 timer 1
-execute if score $timer1 timer matches 1 run scoreboard objectives setdisplay sidebar KillDragon
-execute if score $timer1 timer matches 81 run scoreboard objectives setdisplay sidebar KilledByDragon
-execute if score $timer1 timer matches 160 run scoreboard objectives setdisplay sidebar DirtUsed
-execute if score $timer1 timer matches 180 run scoreboard objectives setdisplay sidebar BreadUsed
-execute if score $timer1 timer matches 200 run scoreboard objectives setdisplay sidebar ArrowUsed
-execute if score $timer1 timer matches 220 run scoreboard objectives setdisplay sidebar GlassBottleUsed
-execute if score $timer1 timer matches 240 run scoreboard players set $timer1 timer 0
+scoreboard players add timer_sidebar drg_global 1
+execute if score timer_sidebar drg_global matches 1 run scoreboard objectives setdisplay sidebar drg_kill
+execute if score timer_sidebar drg_global matches 81 run scoreboard objectives setdisplay sidebar drg_killed
+execute if score timer_sidebar drg_global matches 160 run scoreboard objectives setdisplay sidebar drg_use_dirt
+execute if score timer_sidebar drg_global matches 180 run scoreboard objectives setdisplay sidebar drg_use_bread
+execute if score timer_sidebar drg_global matches 200 run scoreboard objectives setdisplay sidebar drg_use_arrow
+execute if score timer_sidebar drg_global matches 220 run scoreboard objectives setdisplay sidebar drg_use_glass
+execute if score timer_sidebar drg_global matches 240 run scoreboard players set timer_sidebar drg_global 0
 
 # Kill arrow when landing
-execute if score killarrow setting matches 1 run kill @e[type=minecraft:arrow,nbt={inGround:1b}]
+execute if score killarrow drg_global matches 1 run kill @e[type=minecraft:arrow,nbt={inGround:1b}]
 
 # Remove fire from end crystal
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run fill 3 ~-4 -3 -3 ~4 3 air replace minecraft:fire
@@ -46,91 +46,91 @@ execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run fi
 clear @a iron_bars 1
 
 # Add actionbar that show you how many End Crystal left
-execute if score actionbar setting matches 1 in the_end store result score endcrystal endcrystal if entity @e[type=end_crystal]
-execute if score actionbar setting matches 1 if score endcrystal endcrystal matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 2 : Fight the Ender Dragon!","color":"light_purple"}]
-execute if score actionbar setting matches 1 if score endcrystal endcrystal matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 1 : Destroy All Crystal! (","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"},"color":"light_purple"},{"text": " / 10)","color": "light_purple"}]
+execute if score actionbar drg_global matches 1 in the_end store result score endcrystal drg_global if entity @e[type=end_crystal]
+execute if score actionbar drg_global matches 1 if score endcrystal drg_global matches 0 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 2 : Fight the Ender Dragon!","color":"light_purple"}]
+execute if score actionbar drg_global matches 1 if score endcrystal drg_global matches 1..10 if entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Phase 1 : Destroy All Crystal! (","color":"light_purple"},{"score":{"name":"endcrystal","objective":"endcrystal"},"color":"light_purple"},{"text": " / 10)","color": "light_purple"}]
 
-execute if score actionbar setting matches 1 if score endcrystal endcrystal matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon!","color":"light_purple"}]
+execute if score actionbar drg_global matches 1 if score endcrystal drg_global matches 0 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Summon the Ender Dragon!","color":"light_purple"}]
 
 # Add .... animation
-scoreboard players add $timer2 timer 1
-execute if score $timer2 timer matches 6 if score actionbar setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.","color":"light_purple"}]
+scoreboard players add timer_actionbar drg_global 1
+execute if score timer_actionbar drg_global matches 6 if score actionbar drg_global matches 1 if score endcrystal drg_global matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon.","color":"light_purple"}]
 
-execute if score $timer2 timer matches 11 if score actionbar setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..","color":"light_purple"}]
+execute if score timer_actionbar drg_global matches 11 if score actionbar drg_global matches 1 if score endcrystal drg_global matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon..","color":"light_purple"}]
 
-execute if score $timer2 timer matches 16 if score actionbar setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...","color":"light_purple"}]
+execute if score timer_actionbar drg_global matches 16 if score actionbar drg_global matches 1 if score endcrystal drg_global matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon...","color":"light_purple"}]
 
-execute if score $timer2 timer matches 21 if score actionbar setting matches 1 if score endcrystal endcrystal matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon....","color":"light_purple"}]
+execute if score timer_actionbar drg_global matches 21 if score actionbar drg_global matches 1 if score endcrystal drg_global matches 4..14 unless entity @e[type=ender_dragon] run title @a actionbar ["",{"text":"Resummoning The Ender Dragon....","color":"light_purple"}]
 
-execute if score $timer2 timer matches 22 run scoreboard players set $timer2 timer 0
+execute if score timer_actionbar drg_global matches 22 run scoreboard players set timer_actionbar drg_global 0
 
 # Infinite dirt & Remove normal dirt
-execute as @a store result score @s dirt_count run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
-execute as @a unless entity @s[scores={dirt_count=64}] run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
-loot give @a[scores={dirt_count=0}] loot dragon:blocks/many_dirt
+execute as @a store result score @s drg_dirt run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+execute as @a unless entity @s[scores={drg_dirt=64}] run clear @s minecraft:dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={drg_dirt=0}] loot dragon:blocks/many_dirt
 # loot give @a[scores={dirt_count=1..63}] loot dragon:blocks/dirt
 clear @a dirt{dragon_custom:0b}
 
 # Infinite bread & Remove normal bread
-execute as @a store result score @s bread_count run clear @s minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
-clear @a[scores={bread_count=65..}] minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
-loot give @a[scores={bread_count=0}] loot dragon:blocks/many_bread
-loot give @a[scores={bread_count=1..63}] loot dragon:blocks/bread
+execute as @a store result score @s drg_bread run clear @s minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+clear @a[scores={drg_bread=65..}] minecraft:bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={drg_bread=0}] loot dragon:blocks/many_bread
+loot give @a[scores={drg_bread=1..63}] loot dragon:blocks/bread
 clear @a bread{dragon_custom:0b}
 
 # Infinite arrow & Remove normal arrow
-execute as @a store result score @s arrow_count run clear @s minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
-clear @a[scores={arrow_count=65..}] minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
-loot give @a[scores={arrow_count=..0}] loot dragon:blocks/many_arrow
-loot give @a[scores={arrow_count=1..63}] loot dragon:blocks/arrow
+execute as @a store result score @s drg_arrow run clear @s minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+clear @a[scores={drg_arrow=65..}] minecraft:arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+loot give @a[scores={drg_arrow=..0}] loot dragon:blocks/many_arrow
+loot give @a[scores={drg_arrow=1..63}] loot dragon:blocks/arrow
 clear @a arrow{dragon_custom:0b}
 
 # Infinite glass bottle & Remove dragon breath and water bottle
-execute if score glassbottle setting matches 1 as @a store result score @s glass_count run clear @s minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
-execute if score glassbottle setting matches 1 run clear @a[scores={glass_count=65..}] minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
-execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=0}] loot dragon:blocks/many_glass_bottle
-execute if score glassbottle setting matches 1 run loot give @a[scores={glass_count=1..63}] loot dragon:blocks/glass_bottle
-execute if score glassbottle setting matches 1 run clear @a dragon_breath 1
-execute if score glassbottle setting matches 1 run clear @a potion{Potion:"minecraft:water"} 1
-execute if score glassbottle setting matches 1 run clear @a glass_bottle{dragon_custom:0b}
+execute if score glassbottle drg_global matches 1 as @a store result score @s drg_glass run clear @s minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 0
+execute if score glassbottle drg_global matches 1 run clear @a[scores={drg_glass=65..}] minecraft:glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}}
+execute if score glassbottle drg_global matches 1 run loot give @a[scores={drg_glass=0}] loot dragon:blocks/many_glass_bottle
+execute if score glassbottle drg_global matches 1 run loot give @a[scores={drg_glass=1..63}] loot dragon:blocks/glass_bottle
+execute if score glassbottle drg_global matches 1 run clear @a dragon_breath 1
+execute if score glassbottle drg_global matches 1 run clear @a potion{Potion:"minecraft:water"} 1
+execute if score glassbottle drg_global matches 1 run clear @a glass_bottle{dragon_custom:0b}
 
 # Setting
-execute if score dragonfireball setting matches 0 run kill @e[type=dragon_fireball]
-execute if score glassbottle setting matches 0 run clear @a glass_bottle 1
-execute if score difficulty setting matches 0 run difficulty peaceful
-execute if score difficulty setting matches 1 run difficulty easy
-execute if score difficulty setting matches 2 run difficulty normal
-execute if score difficulty setting matches 3 run difficulty hard
-execute if score keepinventory setting matches 0 run gamerule keepInventory false
-execute if score keepinventory setting matches 1 run gamerule keepInventory true
-execute if score ultrasurvival setting matches 0 run gamerule naturalRegeneration true
-execute if score ultrasurvival setting matches 1 run gamerule naturalRegeneration false
-execute if score health setting matches 0 run scoreboard objectives setdisplay belowName 
-execute if score health setting matches 0 run scoreboard objectives setdisplay list
-execute if score health setting matches 1 run scoreboard objectives setdisplay belowName health
-execute if score health setting matches 1 run scoreboard objectives setdisplay list health
-execute if score friendlyfire setting matches 0 run team modify all friendlyFire false
-execute if score friendlyfire setting matches 1 run team modify all friendlyFire true
+execute if score dragonfireball drg_global matches 0 run kill @e[type=dragon_fireball]
+execute if score glassbottle drg_global matches 0 run clear @a glass_bottle 1
+execute if score difficulty drg_global matches 0 run difficulty peaceful
+execute if score difficulty drg_global matches 1 run difficulty easy
+execute if score difficulty drg_global matches 2 run difficulty normal
+execute if score difficulty drg_global matches 3 run difficulty hard
+execute if score keepinventory drg_global matches 0 run gamerule keepInventory false
+execute if score keepinventory drg_global matches 1 run gamerule keepInventory true
+execute if score ultrasurvival drg_global matches 0 run gamerule naturalRegeneration true
+execute if score ultrasurvival drg_global matches 1 run gamerule naturalRegeneration false
+execute if score health drg_global matches 0 run scoreboard objectives setdisplay belowName 
+execute if score health drg_global matches 0 run scoreboard objectives setdisplay list
+execute if score health drg_global matches 1 run scoreboard objectives setdisplay belowName drg_health
+execute if score health drg_global matches 1 run scoreboard objectives setdisplay list drg_health
+execute if score friendlyfire drg_global matches 0 run team modify all friendlyFire false
+execute if score friendlyfire drg_global matches 1 run team modify all friendlyFire true
 
-execute unless score #enderman_tmp setting = enderman setting run function dragon:setting/enderman/check
-scoreboard players operation #enderman_tmp setting = enderman setting
+execute unless score #enderman_tmp drg_global = enderman drg_global run function dragon:setting/enderman/check
+scoreboard players operation #enderman_tmp drg_global = enderman drg_global
 
 # Unable them to drop item
-execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
-execute if score unabletodrop setting matches 1 as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
-execute if score unabletodrop setting matches 1 run tag @e[type=item] add processed
+execute if score unabletodrop drg_global matches 1 as @e[type=item,tag=!processed] run data modify entity @s Owner set from entity @s Thrower
+execute if score unabletodrop drg_global matches 1 as @e[type=item,tag=!processed] run data modify entity @s PickupDelay set value 0
+execute if score unabletodrop drg_global matches 1 run tag @e[type=item] add processed
 
 # Welcome Message
-execute as @a[scores={WelcomeMessage=1..}] at @s run schedule function dragon:title_join/run 3s
-execute as @a[scores={WelcomeMessage=1..}] at @s run function dragon:welcome_message
+execute as @a[scores={drg_join=1..}] at @s run schedule function dragon:title_join/run 3s
+execute as @a[scores={drg_join=1..}] at @s run function dragon:welcome
 
 # Arrow Used Scoreboard
-execute as @a run scoreboard players operation @s ArrowUsed += @s BowUsed
-execute as @a run scoreboard players operation @s ArrowUsed += @s CrossbowUsed
+execute as @a run scoreboard players operation @s drg_use_arrow += @s drg_use_bow
+execute as @a run scoreboard players operation @s drg_use_arrow += @s drg_use_crossbow
 
 # Reset the BowUsed and CrossbowUsed
-scoreboard players reset @a BowUsed
-scoreboard players reset @a CrossbowUsed
+scoreboard players reset @a drg_use_bow
+scoreboard players reset @a drg_use_crossbow
 
 # Execute at end portal the misplaced code
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] run function dragon:endcrystal/end_crystals
@@ -140,6 +140,3 @@ execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=-2.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0.5,z=-2.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=3.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
-
-# Update
-execute unless score version setting matches -2147483648..2147483647 run function dragon:update/1.5
