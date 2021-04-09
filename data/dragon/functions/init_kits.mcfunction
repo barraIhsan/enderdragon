@@ -97,14 +97,14 @@ execute if score shovel drg_kits matches 6 run replaceitem entity @s hotbar.4 ne
 
 # Generic
 replaceitem entity @s weapon.offhand shield{Unbreakable:1b}
-replaceitem entity @s inventory.0 arrow{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
+replaceitem entity @s inventory.0 arrow{drg_custom:1b,display:{Name:'["",{"translate":"item.minecraft.arrow","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
 replaceitem entity @s inventory.9 carved_pumpkin{Unbreakable:1b}
 replaceitem entity @s inventory.18 crossbow{Unbreakable:1b}
 replaceitem entity @s hotbar.0 bow{Unbreakable:1b}
-replaceitem entity @s hotbar.5 dirt{dragon_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
-replaceitem entity @s hotbar.6 bread{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
+replaceitem entity @s hotbar.5 dirt{drg_custom:1b,display:{Name:'["",{"translate":"block.minecraft.dirt","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
+replaceitem entity @s hotbar.6 bread{drg_custom:1b,display:{Name:'["",{"translate":"item.minecraft.bread","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
 replaceitem entity @s hotbar.7 water_bucket
-replaceitem entity @s hotbar.8 glass_bottle{dragon_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
+replaceitem entity @s hotbar.8 glass_bottle{drg_custom:1b,display:{Name:'["",{"translate":"item.minecraft.glass_bottle","italic": false},{"text": " - ","italic": false},{"translate":"enchantment.minecraft.infinity","italic": false}]'}} 64
 
 # Wear pumpkin check
 execute if score @s drg_pumpkin matches 1 run replaceitem entity @s armor.head carved_pumpkin{Unbreakable:1b}

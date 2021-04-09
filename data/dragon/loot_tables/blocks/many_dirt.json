@@ -10,7 +10,7 @@
 					"functions": [
 						{
 							"function": "set_nbt",
-							"tag": "{dragon_custom:1b,display:{Name:'[\"\",{\"translate\":\"block.minecraft.dirt\",\"italic\": false},{\"text\": \" - \",\"italic\": false},{\"translate\":\"enchantment.minecraft.infinity\",\"italic\": false}]'}}"
+							"tag": "{drg_custom:1b,display:{Name:'[\"\",{\"translate\":\"block.minecraft.dirt\",\"italic\": false},{\"text\": \" - \",\"italic\": false},{\"translate\":\"enchantment.minecraft.infinity\",\"italic\": false}]'}}"
 						}
 					]
 				}

@@ -6,7 +6,7 @@
 #---------------------------------------------------------
 
 # Give a tag to the person
-tag @s add dragon_init
+tag @s add drg_init
 
 # Set gamerule
 gamerule commandBlockOutput false
@@ -71,6 +71,17 @@ execute unless score shovel drg_kits = shovel drg_kits run scoreboard players se
 # Update the health scoreboard
 execute if score ultrasurvival drg_global matches 0 unless score @s drg_health matches -2147483648..2147483647 run tp ~ ~4 ~
 
+# Add Spawnpoint and Worldspawn
+execute in the_end run spawnpoint @s 100 49 0
+execute in the_end run setworldspawn 100 49 0
+
+# Teleport to The End
+execute in the_end run teleport @s 100 49 0 90 0
+
+# Make an obsidian platform
+execute in the_end run fill 98 48 -2 102 48 2 minecraft:obsidian
+execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
+
 # Title
 function dragon:title_init/run
 
@@ -91,17 +102,6 @@ tellraw @s ["",{"text":"\u00A7m                                                 
 tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [ Twitter ] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [ YouTube ] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://youtube.com/barraIhsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [ GitHub ] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n\n"}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
-# Add Spawnpoint and Worldspawn
-execute in the_end run spawnpoint @s 100 49 0
-execute in the_end run setworldspawn 100 49 0
-
-# Teleport to The End
-execute in the_end run teleport @s 100 49 0 90 0
-
-# Make an obsidian platform
-execute in the_end run fill 98 48 -2 102 48 2 minecraft:obsidian
-execute in the_end run fill 102 49 -2 98 51 2 minecraft:air
 
 # Add team
 team add all

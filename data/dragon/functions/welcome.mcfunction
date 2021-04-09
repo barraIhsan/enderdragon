@@ -24,5 +24,5 @@ tellraw @s ["",{"text":"\u00A7m                                                 
 scoreboard players set @s drg_join 0
 
 # Update
-execute as @a[tag=!updated] run function dragon:update/obj
-execute unless score version drg_global matches -2147483648..2147483647 run function dragon:update/1.5
+scoreboard objectives add drg_global dummy
+execute unless score version drg_global matches -2147483648..2147483647 as @a[tag=!updated] run function dragon:update/1.5

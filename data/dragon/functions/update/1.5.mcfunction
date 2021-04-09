@@ -100,6 +100,22 @@ scoreboard players operation sword drg_kits = sword kits
 scoreboard players operation pickaxe drg_kits = pickaxe kits
 scoreboard players operation axe drg_kits = axe kits
 scoreboard players operation shovel drg_kits = shovel kits
+scoreboard players operation @s drg_kill = @s KillDragon
+scoreboard players operation @s drg_killed = @s KilledByDragon
+scoreboard players operation @s drg_use_bread = @s BreadUsed
+scoreboard players operation @s drg_use_dirt = @s DirtUsed
+scoreboard players operation @s drg_use_glass = @s GlassBottleUsed
+scoreboard players operation @s drg_use_arrow = @s ArrowUsed
+scoreboard players operation @s drg_use_bow = @s BowUsed
+scoreboard players operation @s drg_use_crossbow = @s CrossbowUsed
+scoreboard players reset @s KillDragon
+scoreboard players reset @s KilledByDragon
+scoreboard players reset @s BreadUsed
+scoreboard players reset @s DirtUsed
+scoreboard players reset @s GlassBottleUsed
+scoreboard players reset @s ArrowUsed
+scoreboard players reset @s BowUsed
+scoreboard players reset @s CrossbowUsed
 scoreboard objectives remove timer
 scoreboard objectives remove dirt_count
 scoreboard objectives remove bread_count
@@ -123,6 +139,24 @@ scoreboard objectives remove kits
 scoreboard objectives remove food
 scoreboard objectives remove endcrystal
 scoreboard players reset food drg_global
+scoreboard objectives remove wear_pumpkin
+scoreboard objectives remove DragonKiller
+scoreboard objectives remove WelcomeMessage
+scoreboard objectives remove health
+execute unless entity @e[scores={KillDragon=0}] run scoreboard objectives remove KillDragon
+execute unless entity @e[scores={KilledByDragon=0}] run scoreboard objectives remove KilledByDragon
+execute unless entity @e[scores={BreadUsed=0}] run scoreboard objectives remove BreadUsed
+execute unless entity @e[scores={DirtUsed=0}] run scoreboard objectives remove DirtUsed
+execute unless entity @e[scores={GlassBottleUsed=0}] run scoreboard objectives remove GlassBottleUsed
+execute unless entity @e[scores={ArrowUsed=0}] run scoreboard objectives remove ArrowUsed
+execute unless entity @e[scores={BowUsed=0}] run scoreboard objectives remove BowUsed
+execute unless entity @e[scores={CrossbowUsed=0}] run scoreboard objectives remove CrossbowUsed
+
+# Add tag
+tag @s add updated
 
 # Message
-tellraw @a ["",{"text": "Ender Dragon Practice","color": "green"},{"text": " has been updated to version "},{"text": "1.5!","color": "blue","bold": true}]
+tellraw @s ["",{"text": "Ender Dragon Practice","color": "green"},{"text": " has been updated to version "},{"text": "1.5!","color": "blue","bold": true}]
+
+# Kill AEC
+kill @e[type=area_effect_cloud,tag=drg_portal]
