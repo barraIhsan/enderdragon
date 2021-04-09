@@ -1,3 +1,6 @@
+# Set version
+scoreboard players set version setting 15
+
 # Add scoreboard
 scoreboard objectives add timer dummy
 scoreboard objectives add dirt_count dummy
@@ -17,6 +20,14 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add health health {"text": "❤","color": "red"}
+
+# Add 0 to score
+scoreboard players add @s KillDragon 0
+scoreboard players add @s KilledByDragon 0
+scoreboard players add @s BreadUsed 0
+scoreboard players add @s DirtUsed 0
+scoreboard players add @s GlassBottleUsed 0
+scoreboard players add @s ArrowUsed 0
 
 # Modify the display name of health
 scoreboard objectives modify health displayname {"text": "❤","color": "red"}
@@ -73,9 +84,6 @@ execute if score kits setting matches 3 run function dragon:kits_player_to_kits_
 execute if score kits setting matches 4 run function dragon:kits_player_to_kits_objective/netherite
 execute if score kits setting matches 0..4 run scoreboard players reset kits setting
 
-# Remove missedEC objectives
+# Remove objectives
 scoreboard objectives remove missedEC
 scoreboard objectives remove food
-
-# Run it per 10 minute
-schedule function dragon:update 600s

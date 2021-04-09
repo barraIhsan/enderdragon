@@ -34,7 +34,6 @@ scoreboard objectives add BowUsed minecraft.used:minecraft.bow
 scoreboard objectives add CrossbowUsed minecraft.used:minecraft.crossbow
 scoreboard objectives add WelcomeMessage minecraft.custom:leave_game
 scoreboard objectives add health health {"text": "❤","color": "red"}
-scoreboard objectives add temp dummy
 
 # Add 0 to score
 scoreboard players add @s KillDragon 0
@@ -99,7 +98,6 @@ tellraw @s ["",{"text":"\u00A7m                                                 
 tellraw @s ["",{"text": "\n"},{"text":"                         Made By : "},{"text":"Barra Ihsan","color":"green"},{"text":"\n\n"},{"text":"          [ Twitter ] ","color":"aqua","clickEvent":{"action":"open_url","value":"https://twitter.com/barra_ihsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Twitter!"}},{"text":"        [ YouTube ] ","color":"#FFC0CB","clickEvent":{"action":"open_url","value":"https://youtube.com/barraIhsan/"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Instagram!"}},{"text":"         [ GitHub ] ","color":"dark_gray","clickEvent":{"action":"open_url","value":"https://github.com/barraIhsan"},"hoverEvent": {"action": "show_text","contents": "Click to visit my Github!"}},{"text": "\n\n"}]
 
 tellraw @s ["",{"text":"\u00A7m                                                                                ","color":"dark_gray"}]
-
 
 # Add Spawnpoint and Worldspawn
 execute in the_end run spawnpoint @s 100 49 0

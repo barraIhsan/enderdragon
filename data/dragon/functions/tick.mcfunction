@@ -140,3 +140,6 @@ execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=-2.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=0.5,z=-2.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
 execute at @e[type=minecraft:area_effect_cloud,tag=endPortalHeightMarker] unless entity @e[type=ender_dragon] run data modify entity @e[type=end_crystal,x=3.5,z=0.5,limit=1,sort=nearest,distance=..5] Invulnerable set value 1b
+
+# Update
+execute unless score version setting matches -2147483648..2147483647 run function dragon:update/1.5
