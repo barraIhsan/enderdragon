@@ -1,7 +1,3 @@
-# Created by https://toptal.com/developers/gitignore/api/windows,visualstudiocode
-# Edit at https://toptal.com/developers/gitignore?templates=windows,visualstudiocode
-
-### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -9,11 +5,9 @@
 !.vscode/extensions.json
 *.code-workspace
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
+# Local History for Visual Studio Code
+.history/
 
-### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -39,4 +33,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://toptal.com/developers/gitignore/api/windows,visualstudiocode
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+secring.*
+
